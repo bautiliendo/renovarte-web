@@ -1,23 +1,39 @@
-import React from 'react'
-import Laptop from '../assets/laptop.jpg'
+import React, { useState } from 'react'
+import products from '../data/products-celulares.json'
+
+export interface Celulares {
+  price: string;
+  title: string;
+  imageUrl: string;
+  description?: string;
+}
+
 
 export const Productos: React.FC = () => {
+
+  const [productos] = useState<Celulares[]>(products);
+
   return (
-    <div className='w-full bg-white py-16 px-4'>
-        <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
-            <img className='w-[500px] mx-auto my-4' src={Laptop} alt='/' />
-            <div className='flex flex-col justify-center'>
-                <p className='text-[#00df9a] font-bold'>DATA ANALITYCS DASHBOARDS</p>
-                <h1 className='md:text-4xl sm:text-3xl text:2xl font-bold py-2'>Data analitycs dashboards</h1>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Quam pariatur alias recusandae eos veniam et atque,
-                    quidem ut reprehenderit amet modi, excepturi fugiat
-                    uae numquam quas facilis, quis doloremque rerum?
-                </p>
-                <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>Ver productos</button>
-            </div>
-        </div>
+    <div className='w-full bg-white py-[100px] text-center'>
+      <div className='flex justify-center'>
+        <p className=' font-bold text-xl pb-[100px] mx-5'>Celulares</p>
+        <p className=' font-bold text-xl pb-[100px] mx-5'>Televisores</p>
+        <p className=' font-bold text-xl pb-[100px] mx-5'>Lavarropas</p>
+        <p className=' font-bold text-xl pb-[100px] mx-5'>Heladeras</p>
+        <p className=' font-bold text-xl pb-[100px] mx-5'>Climatización</p>
+        <p className=' font-bold text-xl pb-[100px] mx-5'>Pequeños Electrodomésticos</p>
+        {/* // todo: MOVILE FIRST */}
+        {/* // todo: barra busqueda */}
+
+      </div>
+      <div className='flex flex-wrap gap-10 justify-center px-4 py-5'>
+        {productos.map((producto) => (
+          <div key={producto.title} className='border-solid border-2 border-gray-600 rounded shadow-xl max-w-[350px] py-10 px-4 justify-center'>
+            <img src={producto.imageUrl} alt={producto.title} style={{ width: 300 }} className='py-4 px-4' />
+            <a><strong>{producto.title}</strong></a>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

@@ -23,10 +23,10 @@ export const Footer: React.FC = () => {
                 <div>
                     <h6 className='font-medium text-gray-400'>Navegación</h6>
                     <ul>
-                        <li className='py-2 text-sm hover:scale-110'><Link to='/'>Inicio</Link></li>
-                        <li className='py-2 text-sm hover:scale-110'><Link to='/productos'>Productos</Link></li>
-                        <li className='py-2 text-sm hover:scale-110'><Link to='/empresa'>Empresa</Link></li>
-                        <li className='py-2 text-sm hover:scale-110'><Link to='/contacto'>Contacto</Link></li>
+                        <li className='py-2 text-sm hover:underline'><Link to='/'>Inicio</Link></li>
+                        <li className='py-2 text-sm hover:underline'><Link to='/productos'>Productos</Link></li>
+                        <li className='py-2 text-sm hover:underline'><Link to='/ofertas'>Ofertas</Link></li>
+                        <li className='py-2 text-sm hover:underline'><Link to='/empresa'>Empresa</Link></li>
                     </ul>
                 </div>
                 <div>
@@ -42,17 +42,17 @@ export const Footer: React.FC = () => {
                     <h6 className='font-medium text-gray-400'>Redes</h6>
                     <ul>
                         <a href='https://www.facebook.com/renovartecba/' target="_blank" rel="noopener noreferrer">
-                            <li className='py-2 text-sm hover:text-blue-400 hover:scale-110 list-none'>Facebook</li>
+                            <li className='py-2 text-sm hover:text-blue-400 hover:underline list-none'>Facebook</li>
                         </a>
                         <a href='https://www.instagram.com/renovartecba/' target="_blank" rel="noopener noreferrer">
-                            <li className='py-2 text-sm hover:text-rose-400 hover:scale-110 list-none'>Instagram</li>
+                            <li className='py-2 text-sm hover:text-rose-400 hover:underline list-none'>Instagram</li>
                         </a>
                     </ul>
                 </div>
                 <div>
                     <h6 className='font-medium text-gray-400'>Contactanos</h6>
                     <a href='https://api.whatsapp.com/send?phone=5493512399026&text=Hola!%20Me%20contacto%20desde%20la%20web%20para%20realizar%20una%20consulta...' target="_blank" rel="noopener noreferrer">
-                        <li className='py-2 text-sm hover:text-green-400 hover:scale-110 list-none'>WhatsApp</li>
+                        <li className='py-2 text-sm hover:text-green-400 hover:underline list-none'>WhatsApp</li>
                     </a>
                 </div>
             </div>

@@ -1,14 +1,14 @@
 
-export const TerminosyCond = () => {
+export const TerminosyCond: React.FC = () => {
   return (
     <div className='w-full bg-white py-16 px-4'>
       <div className='max-w-[1240px] mx-auto grid '>
         <div className='flex flex-col justify-center'>
-          <h1 className='md:text-2xl sm:text-1xl text:xl font-bold py-2'>Términos y condiciones de uso del sitio</h1>
+          <h1 className='md:text-3xl sm:text-2xl text:1xl font-bold py-2'>Términos y condiciones de uso del sitio</h1>
           <p>
           Al ingresar, el Usuario declara saber, conocer y aceptar las presentes Condiciones de Uso. Las mismas, así como sus modificaciones, estarán vigentes en forma inmediata a su publicación en el Sitio. La utilización del Sitio implica el conocimiento y la aceptación plena por parte del Usuario de las Condiciones de Uso. En caso de no aceptar en las Condiciones de Uso o cualquier cambio o modificación de las mismas no deberá continuar utilizando el Sitio.
           </p>
-          <h1 className='md:text-2xl sm:text-1xl text:xl font-bold py-2'>Naturaleza del Servicio y destino del Sitio</h1>
+          <h1 className='md:text-2xl sm:text-1xl text:xl font-bold py-2'>Naturaleza del servicio y destino del sitio</h1>
           <p>
           El Sitio ha sido programado para que constituya un medio virtual para el acceso de los Usuarios a los productos de la tienda de Renovarte desde la comodidad de su domicilio. Usuarios que pueden utilizar los Servicios del Sitio. Los Servicios están disponibles para personas que tengan capacidad legal para contratar. No podrán utilizar los Servicios las personas que no tengan esa capacidad, los menores de edad o quien registre como Usuario una persona jurídica, deberá tener capacidad para contratar a nombre de tal entidad y de obligar a la misma en los términos de estas Condiciones de Uso.
           </p>
@@ -63,18 +63,6 @@ export const TerminosyCond = () => {
           <h1 className='md:text-2xl sm:text-1xl text:xl font-bold py-2'>Prohibiciones al Usuario y sus responsabilidades</h1>
           <p>
             Está prohibido al Usuario explotar de cualquier forma las informaciones adquiridas por medio del Sitio. No podrá reproducir los textos o imágenes de los anuncios para otros fines que los de su propio recordatorio personal. El Usuario se compromete a tomar a su cargo cualquier responsabilidad contractual o extracontractual que derive de actos como Usuario del Sitio y acepta mantener indemne a Renovarte, respecto de y contra cualquier reclamo por parte de terceros, derivado o relacionado con el uso inadecuado del Sitio o por la violación de las presentes Condiciones de Uso y sus respectivas modificaciones, o que surja de dicho uso y/o a causa de algún comentario publicado por el Usuario en el Sitio.
-          </p>
-          <h1 className='md:text-2xl sm:text-1xl text:xl font-bold py-2'>Terminación</h1>
-          <p>
-            Estas Condiciones de Uso implican un contrato que entrará en vigor tan pronto el Usuario acepte las Condiciones de Uso y/o use los servicios del Sitio y permanecerán vigentes hasta que el presente contrato sea cancelado sea por el Usuario o por Renovarte. El Usuario puede rescindir este contrato en cualquier momento, siempre que lo haga para el futuro evitando el uso de este Sitio y/o siendo Usuario Registrado, renunciando a su registro siguiendo el procedimiento especialmente previsto para ello. Renovarte también puede rescindir este contrato en cualquier momento siendo válida la notificación de tal rescisión a los domicilios reales o electrónicos que el Usuario tuviere registrados en el Sitio. Asimismo Renovarte podrá cancelar sin previo aviso la condición de Usuario, y en consecuencia denegar el acceso a los Servicios del Sitio o a comprar por esta vía, si el Usuario no cumpliera con cualquier término o disposición de las presentes Condiciones de Uso. Esta cláusula se aplicará sea o no el Usuario un navegante registrado. Renovarte podrá en cualquier momento, temporal o permanentemente dar de baja este Sitio.
-          </p>
-          <h1 className='md:text-2xl sm:text-1xl text:xl font-bold py-2'>Modificaciones en las Condiciones de Uso</h1>
-          <p>
-            Tales modificaciones serán publicadas en el Sitio, obrando en él la versión vigente al momento del inicio de cada sesión. Toda vez que por tratarse de un sitio Web abierto a los clientes en general, Renovarte carece de posibilidad de notificarle particularmente a cada uno de ellos, salvo mediante la publicación en el propio Sitio, por lo que el Usuario se compromete a verificar en forma las Condiciones de Uso con cualquier uso que haga del mismo, entendiéndose que al iniciar cada sesión acepta las que estén vigentes y publicadas en ese momento en la forma y con los efectos establecidos en las presentes Condiciones de Uso.
-          </p>
-          <h1 className='md:text-2xl sm:text-1xl text:xl font-bold py-2'>General</h1>
-          <p>
-            Las Condiciones de Uso representan el acuerdo completo entre las partes y sustituyen a todos los acuerdos anteriores que pudieran existir entre ellas. Los títulos utilizados en estas Condiciones de Uso son sólo con fines de referencia y en ninguna manera definen o limitan el alcance de la disposición que titulan. Si cualquier disposición de las mismas se considerara inaplicable por cualquier razón, tal disposición deberá reformarse sólo en la medida necesaria para hacerla exigible y las demás condiciones del presente Acuerdo permanecerán en pleno vigor y efecto. La inacción de Renovarte con respecto a un incumplimiento de este acuerdo por el Usuario o por otros no constituye una renuncia y no limitará los derechos de Renovarte con respecto a dicho incumplimiento o infracciones posteriores. Ley aplicable, resolución de controversias, medidas procesales y notificaciones. Este contrato será gobernado por y se interpretará según la legislación vigente en la República Argentina. Cualquier conflicto relacionado con este contrato o con el uso que el Usuario haga de este Sitio será resuelto por los tribunales ordinarios competentes según la legislación vigente y aplicable a la relación de consumo existente entre las partes. En caso de que dicha legislación no defina una competencia específica, será competente la justicia nacional ordinaria en asuntos comerciales con asiento en la Ciudad Autónoma de Buenos Aires, siendo aplicable esta disposición aunque el Usuario estuviera realmente domiciliado fuera de los límites de la Ciudad Autónoma de Buenos Aires o de la República Argentina, por entenderse que este lugar ha sido el lugar de celebración del presente contrato. Salvo que lo contrario haya sido acordado previamente y por escrito firmado entre el Usuario y Renovarte, todas las notificaciones que se hagan a los usuarios en relación a las presentes Condiciones de Uso se publicarán en el Sitio y tendrán efecto desde la fecha de su publicación. Las notificaciones que el Usuario quiera dirigir a Renovarte deberán ser dirigidas a Chaco 1670, Ciudad de Mar Del Plata donde queda constituido el domicilio.
           </p>
         </div>
       </div>

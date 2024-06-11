@@ -1,6 +1,7 @@
 import React from 'react'
 import { ReactTyped } from "react-typed";
 import { Productos } from './Productos';
+// import { AiOutlineArrowDown } from "react-icons/ai";
 
 export const Hero: React.FC = () => {
   return (
@@ -28,8 +29,10 @@ export const Hero: React.FC = () => {
         loop 
         />
        </div>
-        <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Ver productos</button>
+        <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Ver productos</button> 
       </div>
+    
+      {/* //todo   AGREGAR FLECHA PARA ABAJO*/}
     </div>
     <Productos />
     </>

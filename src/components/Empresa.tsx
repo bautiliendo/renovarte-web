@@ -1,5 +1,5 @@
 
-export const Empresa = () => {
+export const Empresa: React.FC = () => {
   return (
     <div className='w-full bg-white py-16 px-4'>
       <div className='max-w-[1240px] mx-auto grid '>
