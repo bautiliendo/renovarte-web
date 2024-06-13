@@ -17,7 +17,7 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
             <div className='w-full'><Link to='/'><img src={LogoBlack} style={{width: 190}}/></Link></div>
             <ul className='hidden md:flex'>
                 <li className='p-4 hover:scale-[1.04]'><Link to='/productos'>Productos</Link></li>
-                <li className='p-4 hover:scale-[1.04]'><Link to='/ofertas'>Ofertas</Link></li>
+                <li className='p-4 hover:scale-[1.04]'><Link to='/comprar'>Comprar</Link></li>
                 <li className='p-4 hover:scale-[1.04]'><Link to='/empresa'>Empresa</Link></li>
             </ul>
             <div className='mr-10 ml-10 hidden md:flex hover:scale-[1.04]'>
@@ -31,7 +31,7 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
             <div className='w-full'><img src={LogoBlack} style={{width: 190}}/></div>
                 <ul className='uppercase p-4'>
                     <li className='p-4 border-b border-gray-600 hover:underline'><Link to='/productos'>Productos</Link></li>
-                    <li className='p-4 border-b border-gray-600 hover:underline'><Link to='/ofertas'>Ofertas</Link></li>
+                    <li className='p-4 border-b border-gray-600 hover:underline'><Link to='/comprar'>Comprar</Link></li>
                     <li className='p-4 border-b border-gray-600 hover:underline'><Link to='/empresa'>Empresa</Link></li>
                 </ul>
                 <div className='mr-10 ml-10'>

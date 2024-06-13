@@ -5,10 +5,10 @@ import { Footer } from './components/common/Footer'
 import { Routes, Route } from "react-router-dom";
 import { PoliticaPrivacidad } from './components/PoliticaPrivacidad';
 import { TerminosyCond } from './components/TerminosyCond';
-import { Ofertas } from './components/Ofertas';
 import { Carrito } from './components/Carrito';
 import { Empresa } from './components/Empresa';
 import { ScrollTop } from './helpers/ScrollTop';
+import { Comprar } from './components/Comprar';
 
 
 
@@ -22,9 +22,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/productos" element={<Productos />} />
-        <Route path="/ofertas" element={<Ofertas />} />
+        <Route path="/comprar" element={<Comprar />} />
         <Route path="/empresa" element={<Empresa />} />
-        <Route path="/" element={<Carrito />} />
+        <Route path="/carrito" element={<Carrito />} />
         <Route path="/politicapriv" element={<PoliticaPrivacidad />} />
         <Route path="/terminosycond" element={<TerminosyCond />} />
       </Routes>
