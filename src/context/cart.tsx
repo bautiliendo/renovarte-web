@@ -14,6 +14,7 @@ export const CartContext = createContext<CartContextType | undefined>(undefined)
 interface CartProviderProps {
     children: ReactNode;
   }
+  
 //2. Crear provider
 export function CartProvider({ children }: CartProviderProps) {
     const [cart, setCart] = useState<CartProduct[]>([])
