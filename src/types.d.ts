@@ -15,3 +15,4 @@ type CartAction =
   | { type: "REMOVE_FROM_CART"; payload: CartProduct }
   | { type: "REMOVE_ITEM_FROM_CART"; payload: CartProduct }
   | { type: "CLEAR_CART"; payload? };
+

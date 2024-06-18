@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 import { AiOutlineShoppingCart, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import LogoBlack from '../../assets/logo-black(1).png'
@@ -11,6 +11,10 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
     const handleNav = () => {
         setNav(!nav)
     }
+
+    const cartQuantity = useMemo(() => {
+        return cart.reduce((accum, item) => accum + item.quantity, 0);
+    }, [cart]);
 
     return (
         <div className='top-0 left-0 w-full z-50 bg-[#000300]'>
@@ -26,7 +30,7 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
                     cart.length >= 1 ? (
                         <div className='flex gap-1 items-center'>
                         <Link to='/carrito'><AiOutlineShoppingCart size={20} /></Link>
-                        <button className='bg-[#e76e49] text-black px-2 rounded-full'>{cart.length}</button>
+                        <button className='bg-[#00df9a] text-black px-2 rounded-full'>{cartQuantity}</button>
                         </div>
                     ) 
                     : (
@@ -50,7 +54,7 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
                     cart.length >= 1 ? (
                         <div className='flex gap-1 items-center'>
                         <Link to='/carrito'><AiOutlineShoppingCart size={20} /></Link>
-                        <button className='bg-[#e76e49] text-black px-2 rounded-full'>{cart.length}</button>
+                        <button className='bg-[#00df9a] text-black px-2 rounded-full'>{cartQuantity}</button>
                         </div>
                     ) 
                     : (

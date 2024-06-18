@@ -3,7 +3,7 @@ import { CartAction, CartProduct } from "../types";
 export const cartInitialState: CartProduct[] = JSON.parse(window.localStorage.getItem('cart') || '[]');
 
 //guardar en local storage:
-export const updateLocalStorage = (state: CartProduct[]): void  => {
+export const updateLocalStorage = (state: CartProduct[]): void => {
     window.localStorage.setItem('cart', JSON.stringify(state));
 }
 
@@ -53,12 +53,10 @@ export const cartReducer = (state: CartProduct[], action: CartAction): CartProdu
             updateLocalStorage(newState)
             return newState
         }
-
         case 'CLEAR_CART': {
             updateLocalStorage([]);
             return [];
         }
-
     }
 
     return state
