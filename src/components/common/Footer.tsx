@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
                     <ul>
                         <li className='py-2 text-sm hover:underline'><Link to='/'>Inicio</Link></li>
                         <li className='py-2 text-sm hover:underline'><Link to='/productos'>Productos</Link></li>
-                        <li className='py-2 text-sm hover:underline'><Link to='/ofertas'>Ofertas</Link></li>
+                        <li className='py-2 text-sm hover:underline'><Link to='/comprar'>¿Cómo comprar?</Link></li>
                         <li className='py-2 text-sm hover:underline'><Link to='/empresa'>Empresa</Link></li>
                     </ul>
                 </div>

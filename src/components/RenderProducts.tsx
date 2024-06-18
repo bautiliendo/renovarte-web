@@ -8,7 +8,7 @@ interface RenderProductsProps {
 }
 
 export const RenderProducts: React.FC<RenderProductsProps> = ({ productos }) => {
-    const { addToCart, cart, removeFromCart } = useCart();
+    const { addToCart, cart, removeItemFromCart } = useCart();
 
     const checkProductInCart = (product: Producto) => {
         return cart.some(item => item.title === product.title);
@@ -22,22 +22,25 @@ export const RenderProducts: React.FC<RenderProductsProps> = ({ productos }) => 
                     return (
                         <li key={producto.title} className='border-solid border-2 rounded-lg shadow-lg max-w-[350px] py-10 px-4 flex flex-col items-center transition-transform transform hover:border-gray-300'>
                             <img
+                                style={{ width: 300, maxHeight: 300, minHeight: 300, }}
                                 src={producto.imageUrl}
                                 alt={producto.title}
-                                className='width-[300px] h-auto py-4 px-4' />
-                            <div className='text- font-semibold mt-4'>
-                                {producto.title}
-                            </div>
-                            <div className='mt-4'>
-                                {
-                                    isProductOnCart
-                                        ? <button onClick={() => removeFromCart({ ...producto, quantity: 1 })} className='bg-[#e76e49] text-white p-2 rounded-full hover:bg-[#b84e40] focus:outline-none'>
-                                            <MdRemoveShoppingCart size={30} />
-                                        </button>
-                                        : <button onClick={() => addToCart({ ...producto, quantity: 1 })} className='bg-[#00df9a] text-white p-2 rounded-full hover:bg-[#1ea77b] focus:outline-none'>
-                                            <MdAddShoppingCart size={30} />
-                                        </button>
-                                }
+                                className='py-4 px-4' />
+                            <div className='flex flex-col flex-grow items-center'>
+                                <div className='font-semibold mt-4 text-center' style={{ minHeight: '3em' }}>
+                                    {producto.title}
+                                </div>
+                                <div className='mt-4'>
+                                    {
+                                        isProductOnCart
+                                            ? <button onClick={() => removeItemFromCart({ ...producto, quantity: 1 })} className='bg-[#e76e49] text-white p-2 rounded-full hover:bg-[#b84e40] focus:outline-none'>
+                                                <MdRemoveShoppingCart size={30} />
+                                            </button>
+                                            : <button onClick={() => addToCart({ ...producto, quantity: 1 })} className='bg-[#00df9a] text-white p-2 rounded-full hover:bg-[#1ea77b] focus:outline-none'>
+                                                <MdAddShoppingCart size={30} />
+                                            </button>
+                                    }
+                                </div>
                             </div>
                         </li>
                     );

@@ -4,7 +4,7 @@ export const Empresa: React.FC = () => {
     <div className='w-full bg-white py-16 px-4'>
       <div className='max-w-[1240px] mx-auto grid '>
         <div className='flex flex-col justify-center'>
-          <h1 className='md:text-3xl sm:text-2xl text:1xl font-bold py-2'>Quienes somos</h1>
+          <h1 className='md:text-3xl sm:text-2xl text:1xl font-bold py-2'>Acerca de nosotros</h1>
           <p>
             En nuestra empresa, con sede en Córdoba, nos enorgullecemos de contar con una trayectoria de 7 años en el mercado de ventas corporativas, destacándonos por nuestro compromiso con la calidad y la satisfacción de nuestros clientes. Desde nuestros inicios, hemos trabajado arduamente para consolidarnos como líderes en el sector, ofreciendo productos y servicios que cumplen con los más altos estándares de excelencia.
           </p>

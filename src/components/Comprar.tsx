@@ -3,10 +3,10 @@ import React from 'react'
 
 export const Comprar: React.FC = () => {
   return (
-    <div className="w-full bg-white py-16 px-4 h-[450px]">
+    <div className="w-full bg-white py-16 px-4 ">
       <div className='max-w-[1240px] mx-auto grid '>
 
-        <h1 className="md:text-3xl sm:text-2xl text:1xl font-bold py-2">¿Cómo Comprar?</h1>
+        <h1 className="md:text-3xl sm:text-2xl text:xl font-bold py-2">¿Cómo Comprar?</h1>
         <p className="mb-4">
           En nuestro e-commerce, puedes añadir productos a tu carrito y realizar la compra de manera sencilla a través de WhatsApp. Aquí te explicamos los pasos:
         </p>
