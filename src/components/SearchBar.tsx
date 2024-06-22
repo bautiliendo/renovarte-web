@@ -1,12 +1,12 @@
 import { AiOutlineSearch } from "react-icons/ai";
 import { useState } from "react";
+import { useFiltersContext } from "../hooks/useFiltersContext";
+import { useNavigate } from "react-router-dom";
 
-interface FiltrosProps {
-    changeFilters: (filters: { category: string, searched: string }) => void;
-}
-
-export const SearchBar: React.FC<FiltrosProps> = ({ changeFilters }) => {
+export const SearchBar: React.FC = () => {
+    const navigate = useNavigate();
     const [searchInput, setSearchInput] = useState('');
+    const { setFilters } = useFiltersContext()
 
     const handleSearchInputChange = (event) => {
         setSearchInput(event.target.value);
@@ -14,14 +14,15 @@ export const SearchBar: React.FC<FiltrosProps> = ({ changeFilters }) => {
 
     const handleSearch = (event) => {
         event.preventDefault();
-        changeFilters({
+        setFilters({
             category: '',
             searched: searchInput
         });
+        navigate('/productos')
     }
 
     return (
-        <div className="font-medium my-2">
+        <div className="font-medium mt-2">
             <form className="flex justify-center" onSubmit={handleSearch}>
                 <input
                     type='text'
@@ -32,7 +33,7 @@ export const SearchBar: React.FC<FiltrosProps> = ({ changeFilters }) => {
                 />
                 <button
                     type="submit"
-                    className="mx-0.5 px-5 py-2 border border-gray-500 rounded-md"
+                    className="mx-0.5 px-5 py-2 border border-gray-500 rounded-md bg-black text-white"
                 >
                     <AiOutlineSearch />
                 </button>

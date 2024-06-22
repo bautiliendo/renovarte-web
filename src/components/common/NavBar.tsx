@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import LogoBlack from '../../assets/logo-black(1).png'
 import { useCart } from '../../hooks/useCart';
 import { SearchBar } from '../SearchBar';
-import { useFiltersContext } from '../../hooks/useFiltersContext';
 
 export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pero es buena práctica
     const { cart } = useCart();
@@ -18,15 +17,13 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
         return cart.reduce((accum, item) => accum + item.quantity, 0);
     }, [cart]);
 
-    const { setFilters } = useFiltersContext()
-
     return (
-        <div className='top-0 left-0 w-full z-50 bg-[#000300] '>
+        <div className='top-0 left-0 w-full z-50 bg-[#000300]'>
             <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
                 <div className='w-full'><Link to='/'><img src={LogoBlack} style={{ width: 190 }} /></Link></div>
                 <ul className='hidden md:flex'>
-                    <SearchBar changeFilters={setFilters} />
-                    <li className='p-4 hover:scale-[1.04]'><Link to='/productos'>Productos</Link></li>
+                    <SearchBar />
+                    <li className='p-4 hover:scale-[1.04] hidden 1000px:block'><Link to='/productos'>Productos</Link></li>
                     <li className='p-4 hover:scale-[1.04] hidden 1000px:block'><Link to='/comprar'>Comprar</Link></li>
                     <li className='p-4 hover:scale-[1.04] hidden 1000px:block'><Link to='/empresa'>Empresa</Link></li>
                 </ul>
@@ -68,9 +65,6 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
                         }
                     </div>
                 </div>
-            </div>
-            <div className='block md:hidden mt-[30px] bg-white pt-10 mb-[-10px]'>
-                <SearchBar changeFilters={setFilters} />
             </div>
         </div>
     )

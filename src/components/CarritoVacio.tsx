@@ -11,15 +11,9 @@ export const CarritoVacio: React.FC = () => {
               <p className='my-8'>
               Si quieres hacer una compra, selecciona el producto que te interese y haz click en el botón <strong>Añadir al carrito !</strong>
               </p>
-              <button className='bg-[#00df9a] w-[200px] rounded-md font-medium  py-3 text-black hover:bg-[#1ea77b]' onClick={() => navigate('/productos')}>Ver productos</button> 
+              <button  onClick={() => navigate('/productos')} className="w-[200px] bg-[#00df9a] text-gray-900 hover:bg-[#1ea77b] py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mt-5">Productos</button>
             </div>
           </div>
         </div>
       )
 }
-
-
-// Tu Carrito está vacío
-// Si quieres hacer una compra online, selecciona el producto que te interesa y haz clic en el botón Añadir al carrito
-
-// CONTINUAR COMPRANDO
