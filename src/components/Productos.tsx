@@ -4,7 +4,6 @@ import { Filtros } from './Filtros';
 import { RenderProducts } from './RenderProducts';
 import { useFilters } from '../hooks/UseFilters';
 
-
 export const Productos: React.FC = () => {
 
   const [productos] = useState(allProducts);
@@ -12,7 +11,7 @@ export const Productos: React.FC = () => {
   const filteredProducts = filterProducts(productos);
 
   return (
-    <div className='w-full bg-white py-[100px] text-center justify-center'>
+    <div className='w-full bg-white py-[50px] text-center justify-center'>
       <Filtros changeFilters={setFilters} />
       <RenderProducts productos={filteredProducts} />
     </div>

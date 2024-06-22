@@ -9,15 +9,12 @@ import { Carrito } from './components/Carrito';
 import { Empresa } from './components/Empresa';
 import { ScrollTop } from './helpers/ScrollTop';
 import { Comprar } from './components/Comprar';
-
-
-
+import { FiltersProvider } from './context/filters';
 
 function App() {
-
   return (
-    <>
-    <ScrollTop />
+    <FiltersProvider>
+      <ScrollTop />
       <NavBar />
       <Routes>
         <Route path="/" element={<Hero />} />
@@ -29,7 +26,7 @@ function App() {
         <Route path="/terminosycond" element={<TerminosyCond />} />
       </Routes>
       <Footer />
-    </>
+    </FiltersProvider>
   )
 }
 

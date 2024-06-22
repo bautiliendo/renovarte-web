@@ -6,7 +6,7 @@ import { Productos } from './Productos';
 export const Hero: React.FC = () => {
   return (
     <>
-    <div className='text-white'>
+    <div className='text-white hidden 1000px:block'>
       <div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
         <p className='text-[#00df9a] font-bold p-2'>
           RENOVARTE - Córdoba AR
@@ -29,10 +29,8 @@ export const Hero: React.FC = () => {
         loop 
         />
        </div>
-        <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Ver productos</button> 
+        <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black hover:bg-[#1ea77b]'>Ver productos</button> 
       </div>
-    
-      {/* //todo   AGREGAR FLECHA PARA ABAJO*/}
     </div>
     <Productos />
     </>

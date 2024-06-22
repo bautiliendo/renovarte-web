@@ -16,3 +16,7 @@ type CartAction =
   | { type: "REMOVE_ITEM_FROM_CART"; payload: CartProduct }
   | { type: "CLEAR_CART"; payload? };
 
+  export interface FiltersType {
+    category: string;
+    searched: string;
+}
