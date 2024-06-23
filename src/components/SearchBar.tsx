@@ -33,7 +33,7 @@ export const SearchBar: React.FC = () => {
                 />
                 <button
                     type="submit"
-                    className="mx-0.5 px-5 py-2 border border-gray-500 rounded-md bg-black text-white"
+                    className="mx-0.5 px-5 py-2 border border-gray-500 rounded-md bg-gray-900 text-white"
                 >
                     <AiOutlineSearch />
                 </button>

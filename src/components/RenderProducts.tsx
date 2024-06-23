@@ -37,12 +37,18 @@ export const RenderProducts: React.FC = () => {
                                         <div className='mt-4'>
                                             {
                                                 isProductOnCart
-                                                    ? <button onClick={() => removeItemFromCart({ ...producto, quantity: 1 })} className='bg-[#e76e49] text-white p-2 rounded-full hover:bg-[#b84e40] focus:outline-none'>
+                                                    ?
+                                                    <button onClick={() => removeItemFromCart({ ...producto, quantity: 1 })} className='inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-[#e76e49] transition-all duration-200 border-b-2 border-transparent hover:border-[#b84e40] focus:border-[#b84e40]'>
+                                                        <p>Eliminar del carrito</p>
                                                         <MdRemoveShoppingCart size={30} />
                                                     </button>
-                                                    : <button onClick={() => addToCart({ ...producto, quantity: 1 })} className='bg-[#00df9a] text-white p-2 rounded-full hover:bg-[#1ea77b] focus:outline-none'>
-                                                        <MdAddShoppingCart size={30} />
-                                                    </button>
+                                                    :
+                                                    <div className='flex gap-2'>
+                                                        <button onClick={() => addToCart({ ...producto, quantity: 1 })} className='inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-[#00df9a] transition-all duration-200 border-b-2 border-transparent hover:border-[#1ea77b] focus:border-[#1ea77b]" '>
+                                                            <p>Añadir al carrito</p>
+                                                            <MdAddShoppingCart size={30} />
+                                                        </button>
+                                                    </div>
                                             }
                                         </div>
                                     </div>

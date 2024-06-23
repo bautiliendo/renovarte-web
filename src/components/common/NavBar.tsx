@@ -18,7 +18,7 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
     }, [cart]);
 
     return (
-        <div className='top-0 left-0 w-full z-50 bg-[#000300]'>
+        <div className='top-0 left-0 w-full z-50 bg-gray-900'>
             <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
                 <div className='w-full'><Link to='/'><img src={LogoBlack} style={{ width: 190 }} /></Link></div>
                 <ul className='hidden md:flex'>

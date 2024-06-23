@@ -8,7 +8,7 @@ import LogoBlack from '../../assets/logo-black(1).png'
 
 export const Footer: React.FC = () => {
     return (
-        <div className='max-w-[1240px] mx-0 py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300'>
+        <div className='max-w-[1240px] mx-0 py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300 bg-gray-900'>
             <div>
                 <div className='w-full'><img src={LogoBlack} style={{ width: 190 }} /></div>
                 <p className='py-4'>© 2016 Renovarte</p>
