@@ -16,7 +16,7 @@ export const Modal = ({ open, onClose }) => {
         const detalleCart = cart.map(product => `${product.quantity} ${product.title}`).join(', ');
         const mensaje = `Hola, me contacto desde la web para coordinar una compra de: ${detalleCart}. Mi nombre es: ${nombre}, Ciudad: ${ciudad}, Barrio: ${barrio}, Mutual: ${mutual}`;
 
-        const numeroTel = '5493512399026'; // Reemplaza con el número de teléfono correcto
+        const numeroTel = '5493512399026';
         const whatsappLink = `https://web.whatsapp.com/send?text=${encodeURIComponent(mensaje)}&phone=${numeroTel}`;
         window.open(whatsappLink, '_blank');
     }

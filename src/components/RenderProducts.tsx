@@ -20,33 +20,33 @@ export const RenderProducts: React.FC = () => {
         <>
             {
                 filteredProducts.length >= 1 ? (
-                    <ul className='flex flex-wrap gap-5 justify-center px-4 py-5 max-w-[1500px] mx-auto'>
+                    <ul className='flex flex-wrap sm:gap-5 justify-center sm:px-4 py-5 max-w-[1500px] mx-auto'>
                         {filteredProducts.map((producto) => {
                             const isProductOnCart = checkProductInCart(producto);
                             return (
-                                <li key={producto.title} className='border-solid border-2 rounded-lg shadow-lg max-w-[350px] py-10 px-4 flex flex-col items-center transition-transform transform hover:border-gray-300'>
+                                <li key={producto.title} className='border-solid border-2 rounded-lg shadow-lg lg:max-w-[290px] max-w-[200px] py-6 sm:px-3 flex flex-col items-center transition-transform transform hover:border-gray-300'>
                                     <img
-                                        style={{ width: 300, maxHeight: 300, minHeight: 300, }}
+                                        style={{ width: 200, maxHeight: 200, minHeight: 200 }}
                                         src={producto.imageUrl}
                                         alt={producto.title}
-                                        className='py-4 px-4' />
+                                        className='py-2 px-2 ' />
                                     <div className='flex flex-col flex-grow items-center'>
-                                        <div className='font-semibold mt-4 text-center' style={{ minHeight: '3em' }}>
+                                        <div className='font-semibold mx-4 text-center' style={{ minHeight: '3em' }}>
                                             {producto.title}
                                         </div>
-                                        <div className='mt-4'>
+                                        <div className='mt-2'>
                                             {
                                                 isProductOnCart
                                                     ?
-                                                    <button onClick={() => removeItemFromCart({ ...producto, quantity: 1 })} className="flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#e76e49] hover:bg-[#b84e40] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition">
+                                                    <button onClick={() => removeItemFromCart({ ...producto, quantity: 1 })} className="flex items-center px-3 py-1 border border-transparent rounded-md shadow-sm text-xs font-medium text-white bg-[#e76e49] hover:bg-[#b84e40] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition">
                                                         <p>Eliminar del carrito</p>
-                                                        <MdRemoveShoppingCart size={30} />
+                                                        <MdRemoveShoppingCart size={20} />
                                                     </button>
                                                     :
                                                     <div className='flex gap-2'>
-                                                        <button onClick={() => addToCart({ ...producto, quantity: 1 })} className='flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[#00df9a] hover:bg-[#1ea77b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition'>
+                                                        <button onClick={() => addToCart({ ...producto, quantity: 1 })} className='flex items-center px-3 py-1 border border-transparent rounded-md shadow-sm text-xs font-medium text-white bg-[#00df9a] hover:bg-[#1ea77b] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition'>
                                                             <p>Añadir al carrito</p>
-                                                            <MdAddShoppingCart size={30} />
+                                                            <MdAddShoppingCart size={20} />
                                                         </button>
                                                     </div>
                                             }

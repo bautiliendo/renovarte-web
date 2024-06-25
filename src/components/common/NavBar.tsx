@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react'
 import { AiOutlineShoppingCart, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-import LogoBlack from '../../assets/logo-black(1).png'
+import LogoBlack from '../../assets/Renovartelogo.png'
 import { useCart } from '../../hooks/useCart';
 import { SearchBar } from '../SearchBar';
 
