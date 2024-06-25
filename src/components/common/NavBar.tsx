@@ -31,8 +31,8 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
                     {
                         cart.length >= 1 ? (
                             <div className='flex gap-1 items-center'>
+                                <button className='absolute ml-6 bg-[#00df9a] text-black px-2 rounded-full'>{cartQuantity}</button>
                                 <Link to='/carrito'><AiOutlineShoppingCart size={20} /></Link>
-                                <button className='bg-[#00df9a] text-black px-2 rounded-full'>{cartQuantity}</button>
                             </div>
                         )
                             : (
@@ -44,7 +44,7 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
                 <div onClick={handleNav} className='block md:hidden'>
                     {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
                 </div>
-                <div className={nav ? 'fixed left-0 top-0 w-[60%] h-full z-50 border-r-gray-900 bg-[#000300] ease-in-out duration-500 md:hidden' : 'fixed left-[-100%] '}>
+                <div className={nav ? 'fixed left-0 top-0 w-[60%] h-full z-50 border-r-gray-900 bg-gray-900 ease-in-out duration-500 md:hidden' : 'fixed left-[-100%] '}>
                     <div className='w-full'><img src={LogoBlack} style={{ width: 190 }} /></div>
                     <ul className='uppercase p-4'>
                         <li className='p-4 border-b border-gray-600 hover:underline'><Link to='/productos'>Productos</Link></li>

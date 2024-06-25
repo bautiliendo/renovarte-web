@@ -10,13 +10,13 @@ export const Footer: React.FC = () => {
     return (
         <div className='max-w-[1240px] mx-0 py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300 bg-gray-900'>
             <div>
-                <div className='w-full'><img src={LogoBlack} style={{ width: 190 }} /></div>
+                <div className='w-full'><img src={LogoBlack} style={{ width: 190 }} alt="Logo" /></div>
                 <p className='py-4'>© 2016 Renovarte</p>
                 <p><Link to='terminosycond' className='underline'>Términos y condiciones</Link> - <Link to='politicapriv' className='underline'>Política de privacidad</Link></p>
                 <div className='flex md:w-[75%] my-6 gap-4'>
                     <a href='https://www.facebook.com/renovartecba/' target="_blank" rel="noopener noreferrer"><FaFacebookSquare size={30} /></a>
                     <a href='https://www.instagram.com/renovartecba/' target="_blank" rel="noopener noreferrer"><FaInstagram size={30} /></a>
-                    <a href='https://wa.me/5493512399026?text=Hola%21%20Me%20contacto%20desde%20la%20web%20para%20realizar%20una%20consulta' target="_blank" rel="noopener noreferrer"><FaWhatsapp size={30} /></a>
+                    <a href='https://web.whatsapp.com/send?text=Hola%20Me%20contacto%20desde%20la%20web%20para%20realizar%20una%20consulta&phone=5493512399026' target="_blank" rel="noopener noreferrer"><FaWhatsapp size={30} /></a>
                 </div>
             </div>
             <div className='lg:col-span-2 flex justify-between mx-6'>
@@ -51,14 +51,11 @@ export const Footer: React.FC = () => {
                 </div>
                 <div>
                     <h6 className='font-medium text-gray-400'>Contactanos</h6>
-                    <a href='https://wa.me/5493512399026?text=Hola%21%20Me%20contacto%20desde%20la%20web%20para%20realizar%20una%20consulta' target="_blank" rel="noopener noreferrer">
+                    <a href='https://web.whatsapp.com/send?text=Hola%20Me%20contacto%20desde%20la%20web%20para%20realizar%20una%20consulta&phone=5493512399026' target="_blank" rel="noopener noreferrer">
                         <li className='py-2 text-sm hover:text-green-400 hover:underline list-none'>WhatsApp</li>
                     </a>
-
                 </div>
             </div>
         </div>
     )
 }
-
-
