@@ -19,15 +19,16 @@ export const SearchBar: React.FC = () => {
             searched: searchInput
         });
         navigate('/productos')
+        
     }
 
     return (
-        <div className="font-medium mt-2">
-            <form className="flex justify-center" onSubmit={handleSearch}>
+        <div className="font-medium mt-2 ">
+            <form className="flex justify-center mx-4" onSubmit={handleSearch}>
                 <input
                     type='text'
                     placeholder='Buscar producto'
-                    className=" text-black px-5 py-2 border border-gray-500 rounded-md hover:border-black"
+                    className="md:w-[300px] w-full text-black px-5 py-2 border border-gray-500 rounded-md hover:border-black"
                     value={searchInput}
                     onChange={handleSearchInputChange}
                 />

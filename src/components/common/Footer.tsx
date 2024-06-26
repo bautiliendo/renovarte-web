@@ -4,7 +4,7 @@ import {
     FaWhatsapp
 } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import LogoBlack from '../../assets/Renovartelogo.png'
+import LogoBlack from '../../assets/Renovartelogo(sm).png'
 
 export const Footer: React.FC = () => {
     return (

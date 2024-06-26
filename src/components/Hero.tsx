@@ -16,8 +16,8 @@ export const Hero: React.FC = () => {
 
   return (
     <>
-      <section className="py-10 bg-gray-900 sm:py-16 lg:py-24">
-        <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl text-white">
+      <section className="py-10 bg-gray-900 sm:py-16 lg:py-24 hidden 1050px:block">
+        <div className="px-4 mx-auto sm:px-6 lg:px-10 max-w-6xl text-white">
           <div className="flex items-end justify-between ">
             <div className="flex-1 text-center lg:text-left">
               <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl text-white">RENOVARTE - Córdoba AR</h2>
@@ -39,11 +39,11 @@ export const Hero: React.FC = () => {
 
           <div className="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
 
-            <div className="overflow-hidden bg-white rounded shadow">
+            <div className="overflow-hidden bg-white rounded shadow hidden sm:block">
               <div className="p-5">
                 <div className="relative flex justify-center">
                   <div className="block aspect-w-4 aspect-h-3">
-                    <img className="object-cover w-full h-full" src={Cafetera} alt="cafetera" style={{ width: 300, height: 250 }} />
+                    <img className="object-cover w-full h-full" src={Cafetera} alt="cafetera" style={{ width: 290, height: 250 }} />
                   </div>
 
                   <div className="absolute top-4 left-4">

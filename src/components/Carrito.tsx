@@ -70,6 +70,3 @@ export const Carrito: React.FC = () => {
     </>
   );
 };
-
-
-//<a href='https://web.whatsapp.com/send?text=Hola%20Me%20contacto%20desde%20la%20web%20para%20coordinar%20una%20compra%20de%&phone=5493512399026' target="_blank" rel="noopener noreferrer">

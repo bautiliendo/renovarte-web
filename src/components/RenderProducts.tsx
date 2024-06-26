@@ -31,7 +31,7 @@ export const RenderProducts: React.FC = () => {
                                         alt={producto.title}
                                         className='py-2 px-2 ' />
                                     <div className='flex flex-col flex-grow items-center'>
-                                        <div className='font-semibold mx-4 text-center' style={{ minHeight: '3em' }}>
+                                        <div className='font-semibold text-center text-sm' style={{ minHeight: '4em' }}>
                                             {producto.title}
                                         </div>
                                         <div className='mt-2'>

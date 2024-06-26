@@ -17,17 +17,17 @@ export const Filtros: React.FC = () => {
   }
 
   return (
-    <>
-      <div className="flex justify-center my-5">
-        <ul className="flex flex-wrap justify-center gap-2 ">
+    <div className="w-full overflow-x-auto py-5">
+      <div className="inline-flex justify-start min-w-max px-4">
+        <ul className="flex gap-2">
           <li><button onClick={handleChangeCategory} value='celulares' className="border font-medium px-2 py-2 hover:rounded-md flex flex-col items-center transition-transform transform hover:border-gray-300" >Celulares <img src={Celular} style={{ width: 90, height: 80 }} /> </button></li>
           <li><button onClick={handleChangeCategory} value='televisores' className="border font-medium px-2 py-2 hover:rounded-md flex flex-col justify-center align-middle items-center transition-transform transform hover:border-gray-300" >Televisores  <img src={TV} style={{ width: 90, height: 80 }} /></button></li>
-          <li><button onClick={handleChangeCategory} value='heladeras' className="border font-medium px-2 py-2 hover:rounded-md flex flex-col justify-center align-middle items-center transition-transform transform hover:border-gray-300" >Heladeras <img src={Heladera} style={{ width: 90, height: 80 }} className="pr-2"/></button></li>
+          <li><button onClick={handleChangeCategory} value='heladeras' className="border font-medium px-2 py-2 hover:rounded-md flex flex-col justify-center align-middle items-center transition-transform transform hover:border-gray-300" >Heladeras <img src={Heladera} style={{ width: 90, height: 80 }} className="pr-2" /></button></li>
           <li><button onClick={handleChangeCategory} value='lavarropas' className="border font-medium px-2 py-2 hover:rounded-md flex flex-col justify-center align-middle items-center transition-transform transform hover:border-gray-300" >Lavarropas <img src={Lavarropas} style={{ width: 90, height: 80 }} /></button></li>
           <li><button onClick={handleChangeCategory} value='climatizacion' className="border font-medium px-2 py-2 hover:rounded-md flex flex-col justify-center align-middle items-center transition-transform transform hover:border-gray-300" >Climatización <img src={Aire} style={{ width: 90, height: 80 }} /></button></li>
           <li><button onClick={handleChangeCategory} value='pequenos-electrodomesticos' className="border font-medium px-2 py-2 hover:rounded-md flex flex-col justify-center align-middle items-center transition-transform transform hover:border-gray-300" >Pequeños cocina <img src={Pava} style={{ width: 90, height: 80 }} /></button></li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
