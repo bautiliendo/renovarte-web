@@ -5,11 +5,12 @@ import Heladera from '../assets/heladera.png'
 import Lavarropas from '../assets/lavarropa.png'
 import Aire from '../assets/aire.png'
 import Pava from '../assets/pava.png'
+import React from "react";
 
 export const Filtros: React.FC = () => {
   const { setFilters } = useFiltersContext();
 
-  const handleChangeCategory = (event) => {
+  const handleChangeCategory = (event: React.MouseEvent<HTMLButtonElement>) => {
     setFilters({
       category: event.currentTarget.value,
       searched: ''

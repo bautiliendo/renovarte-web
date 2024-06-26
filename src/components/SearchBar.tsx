@@ -8,18 +8,17 @@ export const SearchBar: React.FC = () => {
     const [searchInput, setSearchInput] = useState('');
     const { setFilters } = useFiltersContext()
 
-    const handleSearchInputChange = (event) => {
+    const handleSearchInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchInput(event.target.value);
     }
 
-    const handleSearch = (event) => {
+    const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         setFilters({
             category: '',
             searched: searchInput
         });
-        navigate('/productos')
-        
+        navigate('/productos');
     }
 
     return (

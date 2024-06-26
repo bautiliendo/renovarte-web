@@ -2,15 +2,22 @@ import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineClose } from "react-icons/md";
 import { useCart } from "../hooks/useCart";
 
-export const Modal = ({ open, onClose }) => {
+interface ModalProps {
+    open: boolean;
+    onClose: () => void;
+}
+
+export const Modal: React.FC<ModalProps> = ({ open, onClose }) => {
+
     const { cart } = useCart();
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        const nombre = e.target.nombre.value;
-        const ciudad = e.target.ciudad.value;
-        const barrio = e.target.barrio.value
-        const mutual = e.target.mutual.value;
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        const nombre = (form.elements.namedItem('nombre') as HTMLInputElement).value;
+        const ciudad = (form.elements.namedItem('ciudad') as HTMLInputElement).value;
+        const barrio = (form.elements.namedItem('barrio') as HTMLInputElement).value;
+        const mutual = (form.elements.namedItem('mutual') as HTMLSelectElement).value;
 
 
         const detalleCart = cart.map(product => `${product.quantity} ${product.title}`).join(', ');
