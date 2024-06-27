@@ -19,7 +19,7 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
 
     return (
         <div className='top-0 left-0 w-full z-50 bg-gray-900 fixed sm:sticky'>
-            <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
+            <div className='flex justify-between items-center h-20 max-w-[1240px] mx-auto px-4 text-white'>
                 <div className='w-full'><Link to='/'><img src={LogoBlack} style={{ width: 190 }} /></Link></div>
                 <ul className='hidden md:flex'>
                     <SearchBar />
@@ -57,7 +57,7 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
                         {nav ? <AiOutlineClose size={20} onClick={handleNav} /> : <AiOutlineMenu size={20} onClick={handleNav} />}
                     </div>
                 </div>
-                <div className={nav ? 'mt-6 fixed left-0 top-0 w-[60%] h-full z-50 border-r-gray-900 bg-gray-900 ease-in-out duration-500 md:hidden' : 'fixed left-[-100%] '}>
+                <div className={nav ? 'pt-6 fixed left-0 top-0 w-[60%] h-full z-50 border-r-gray-900 bg-gray-900 ease-in-out duration-500 md:hidden' : 'fixed left-[-100%] '}>
                     <div className='w-full'><img src={LogoBlack} style={{ width: 190 }} /></div>
                     <ul className='uppercase p-4'>
                         <li className='p-4 border-b border-gray-600 hover:underline'><Link to='/productos'>Productos</Link></li>

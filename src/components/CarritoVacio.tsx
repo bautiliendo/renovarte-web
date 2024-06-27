@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 export const CarritoVacio: React.FC = () => {
     const navigate = useNavigate()
     return (
-        <div className='w-full bg-white py-16 px-4 h-[450px]'>
+        <div className='w-full bg-white py-32 px-4 h-[450px]'>
           <div className='max-w-[1240px] mx-auto grid '>
             <div className='flex flex-col justify-center'>
               <h1 className='md:text-3xl sm:text-2xl text:1xl font-bold py-2'>El Carrito está vacío</h1>

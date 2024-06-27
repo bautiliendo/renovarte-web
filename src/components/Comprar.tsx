@@ -3,7 +3,7 @@ import React from 'react'
 
 export const Comprar: React.FC = () => {
   return (
-    <div className="w-full bg-white py-16 px-4 ">
+    <div className="w-full bg-white py-32 px-4 ">
       <div className='max-w-[1240px] mx-auto grid '>
 
         <h1 className="md:text-3xl sm:text-2xl text:xl font-bold py-2">¿Cómo Comprar?</h1>

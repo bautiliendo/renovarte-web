@@ -1,7 +1,7 @@
 
 export const Empresa: React.FC = () => {
   return (
-    <div className='w-full bg-white py-16 px-4'>
+    <div className='w-full bg-white py-32 px-4'>
       <div className='max-w-[1240px] mx-auto grid '>
         <div className='flex flex-col justify-center'>
           <h1 className='md:text-3xl sm:text-2xl text:1xl font-bold py-2'>Acerca de nosotros</h1>

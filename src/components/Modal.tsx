@@ -24,7 +24,16 @@ export const Modal: React.FC<ModalProps> = ({ open, onClose }) => {
         const mensaje = `Hola, me contacto desde la web para coordinar una compra de: ${detalleCart}. Mi nombre es: ${nombre}, Ciudad: ${ciudad}, Barrio: ${barrio}, Mutual: ${mutual}`;
 
         const numeroTel = '5493512399026';
-        const whatsappLink = `https://web.whatsapp.com/send?text=${encodeURIComponent(mensaje)}&phone=${numeroTel}`;
+
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        
+        let whatsappLink;
+
+        if (isMobile) {
+            whatsappLink = `https://wa.me/${numeroTel}?text=${encodeURIComponent(mensaje)}`;
+        } else {
+            whatsappLink = `https://web.whatsapp.com/send?text=${encodeURIComponent(mensaje)}&phone=${numeroTel}`;
+        }
         window.open(whatsappLink, '_blank');
     }
 
@@ -33,27 +42,27 @@ export const Modal: React.FC<ModalProps> = ({ open, onClose }) => {
         <div onClick={onClose} className="bg-black bg-opacity-50 fixed inset-0 flex items-center justify-center">
             <div onClick={(e) => {
                 e.stopPropagation();
-            }} className="bg-gray-200 w-full max-w-[600px] shadow-xl relative p-6 rounded-lg">
+            }} className="bg-gray-200 w-full max-w-[600px] shadow-xl relative rounded-lg mx-8">
                 <div className="flex justify-end">
-                    <button onClick={onClose} className="hover:bg-[#e76e49] hover:rounded-full p-2 absolute hover:text-white">
+                    <button onClick={onClose} className="p-4 absolute hover:text-red-800">
                         <MdOutlineClose />
                     </button>
                 </div>
-                <form className="max-w-sm mx-auto p-10" onSubmit={handleSubmit}>
-                    <div className="mb-5">
-                        <label htmlFor="nombre" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nombre y Apellido *</label>
+                <form className="max-w-sm mx-auto p-5" onSubmit={handleSubmit}>
+                    <div className="mb-4">
+                        <label htmlFor="nombre" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Nombre y Apellido *</label>
                         <input type="text" id="nombre" className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:bg-gray-700 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Nombre y Apellido" required />
                     </div>
-                    <div className="mb-5">
-                        <label htmlFor="ciudad" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ciudad</label>
+                    <div className="mb-4">
+                        <label htmlFor="ciudad" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Ciudad</label>
                         <input type="text" id="ciudad" className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:bg-gray-700 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Córdoba" required />
                     </div>
-                    <div className="mb-5">
-                        <label htmlFor="barrio" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Barrio</label>
+                    <div className="mb-4">
+                        <label htmlFor="barrio" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Barrio</label>
                         <input type="text" id="barrio" className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:bg-gray-700 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="General Paz" required />
                     </div>
-                    <div className="mb-5">
-                        <label htmlFor="mutual" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mutual</label>
+                    <div className="mb-4">
+                        <label htmlFor="mutual" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Mutual</label>
                         <select id="mutual" className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:bg-gray-700 dark:focus:border-blue-500 dark:focus:ring-blue-500">
                             <option value="suoem">SUOEM</option>
                             <option value="upcn">UPCN</option>
@@ -63,7 +72,7 @@ export const Modal: React.FC<ModalProps> = ({ open, onClose }) => {
                     </div>
                     <button
                         type="submit"
-                        className="my-2 flex items-center gap-2 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition">
+                        className="flex items-center gap-2 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition">
                         <FaWhatsapp size={30} />
                         Enviar
                     </button>
