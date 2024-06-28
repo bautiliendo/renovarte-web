@@ -21,16 +21,22 @@ export const Modal: React.FC<ModalProps> = ({ open, onClose }) => {
 
 
         const detalleCart = cart.map(product => `${product.quantity} ${product.title}`).join(', ');
-        const mensaje = `Hola, me contacto desde la web para coordinar una compra de: ${detalleCart}. Mi nombre es: ${nombre}, Ciudad: ${ciudad}, Barrio: ${barrio}, Mutual: ${mutual}`;
+        const mensaje = `Hola! Mi nombre es ${nombre}. Me contacto desde su página web para coordinar la compra de:
+
+*${detalleCart}*
+
+*Ciudad:* ${ciudad}
+*Barrio:* ${barrio}
+*Mutual:* ${mutual}`;
 
         const numeroTel = '5493512399026';
 
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // -> test compara los dispositivos con (navigator.userAgent) 
+
         let whatsappLink;
 
         if (isMobile) {
-            whatsappLink = `https://wa.me/${numeroTel}?text=${encodeURIComponent(mensaje)}`;
+            whatsappLink = `https://wa.me/${numeroTel}?text=${encodeURIComponent(mensaje)}`; // encodeURIComponent --> espacios se convierten en %20, "ñ" en %C3%B1, etc.
         } else {
             whatsappLink = `https://web.whatsapp.com/send?text=${encodeURIComponent(mensaje)}&phone=${numeroTel}`;
         }
@@ -48,26 +54,26 @@ export const Modal: React.FC<ModalProps> = ({ open, onClose }) => {
                         <MdOutlineClose />
                     </button>
                 </div>
-                <form className="max-w-sm mx-auto p-5" onSubmit={handleSubmit}>
-                    <div className="mb-4">
+                <form className="max-w-sm mx-auto p-4 sm:p-12" onSubmit={handleSubmit}>
+                    <div className="mb-2">
                         <label htmlFor="nombre" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Nombre y Apellido *</label>
                         <input type="text" id="nombre" className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:bg-gray-700 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Nombre y Apellido" required />
                     </div>
-                    <div className="mb-4">
-                        <label htmlFor="ciudad" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Ciudad</label>
-                        <input type="text" id="ciudad" className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:bg-gray-700 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Córdoba" required />
+                    <div className="mb-2">
+                        <label htmlFor="ciudad" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Ciudad *</label>
+                        <input type="text" id="ciudad" className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:bg-gray-700 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="Córdoba Cápital" required />
                     </div>
-                    <div className="mb-4">
-                        <label htmlFor="barrio" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Barrio</label>
-                        <input type="text" id="barrio" className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:bg-gray-700 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="General Paz" required />
+                    <div className="mb-2">
+                        <label htmlFor="barrio" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Barrio *</label>
+                        <input type="text" id="barrio" className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:bg-gray-700 dark:focus:border-blue-500 dark:focus:ring-blue-500" placeholder="General Paz / Arguello" required />
                     </div>
                     <div className="mb-4">
                         <label htmlFor="mutual" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Mutual</label>
                         <select id="mutual" className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:bg-gray-700 dark:focus:border-blue-500 dark:focus:ring-blue-500">
-                            <option value="suoem">SUOEM</option>
-                            <option value="upcn">UPCN</option>
-                            <option value="3abril" selected>3 Abril</option>
-                            <option value="otro">Otro</option>
+                            <option value="SUOEM" selected>SUOEM</option>
+                            <option value="UPCN">UPCN</option>
+                            <option value="3 Abril">3 Abril</option>
+                            <option value="Otro">Otro</option>
                         </select>
                     </div>
                     <button

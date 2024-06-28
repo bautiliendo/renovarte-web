@@ -20,11 +20,11 @@ export const RenderProducts: React.FC = () => {
         <>
             {
                 filteredProducts.length >= 1 ? (
-                    <ul className='flex flex-wrap sm:gap-5 justify-center sm:px-4 py-5 max-w-[1500px] mx-auto'>
+                    <ul className='flex flex-wrap justify-center max-w-[1500px] mx-auto gap-4 mt-4'>
                         {filteredProducts.map((producto) => {
                             const isProductOnCart = checkProductInCart(producto);
                             return (
-                                <li key={producto.title} className='border-solid border-2 rounded-lg shadow-lg lg:max-w-[290px] max-w-[200px] py-6 sm:px-3 flex flex-col items-center transition-transform transform hover:border-gray-300'>
+                                <li key={producto.title} className='border-solid border-2 rounded-lg shadow-lg md:max-w-[250px] md:min-w-[250px] max-w-[189px] min-w-[189px] py-6 flex flex-col items-center transition-transform transform hover:border-gray-300'>
                                     <img
                                         style={{ width: 200, maxHeight: 200, minHeight: 200 }}
                                         src={producto.imageUrl}

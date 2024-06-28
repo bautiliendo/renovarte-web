@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import { AiOutlineShoppingCart, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import LogoBlack from '../../assets/Renovartelogo(sm).png'
 import { useCart } from '../../hooks/useCart';
 import { SearchBar } from '../SearchBar';
@@ -31,12 +31,14 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
                     {
                         cart.length >= 1 ? (
                             <div className='flex gap-1 items-center'>
-                                <button className='absolute ml-6 bg-[#00df9a] text-black px-2 rounded-full'>{cartQuantity}</button>
-                                <Link to='/carrito'><AiOutlineShoppingCart size={20} /></Link>
+                                <Link to='/carrito'><AiOutlineShoppingCart size={25} /></Link>
+                                <Link to='/carrito' className='mb-4'>
+                                    <button className='absolute bg-[#00df9a] text-black px-1.5 rounded-full text-xs' >{cartQuantity}</button>
+                                </Link>
                             </div>
                         )
                             : (
-                                <Link to='/carrito'><AiOutlineShoppingCart size={20} /></Link>
+                                <Link to='/carrito'><AiOutlineShoppingCart size={25} /></Link>
                             )
                     }
                 </div>
@@ -46,15 +48,17 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
                         {
                             cart.length >= 1 ? (
                                 <div className='flex gap-1 items-center'>
-                                    <Link to='/carrito'><AiOutlineShoppingCart size={20} /></Link>
-                                    <button className='absolute ml-6 bg-[#00df9a] text-black px-2 rounded-full'>{cartQuantity}</button>
+                                    <Link to='/carrito'><AiOutlineShoppingCart size={25} /></Link>
+                                    <Link to='/carrito' className='mb-4'>
+                                        <button className='absolute bg-[#00df9a] text-black px-1.5 rounded-full text-xs' >{cartQuantity}</button>
+                                    </Link>
                                 </div>
                             )
                                 : (
-                                    <Link to='/carrito'><AiOutlineShoppingCart size={20} /></Link>
+                                    <Link to='/carrito'><AiOutlineShoppingCart size={25} /></Link>
                                 )
                         }
-                        {nav ? <AiOutlineClose size={20} onClick={handleNav} /> : <AiOutlineMenu size={20} onClick={handleNav} />}
+                        {nav ? <AiOutlineClose size={25} onClick={handleNav} /> : <AiOutlineMenu size={25} onClick={handleNav} />}
                     </div>
                 </div>
                 <div className={nav ? 'pt-6 fixed left-0 top-0 w-[60%] h-full z-50 border-r-gray-900 bg-gray-900 ease-in-out duration-500 md:hidden' : 'fixed left-[-100%] '}>
