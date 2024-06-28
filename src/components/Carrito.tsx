@@ -17,9 +17,9 @@ export const Carrito: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="md:text-3xl sm:text2-xl text-xl py-4 font-bold text-gray-900 text-center">Mi carrito</h1>
             <div className="bg-white shadow overflow-hidden sm:rounded-lg">
-              <ul className="divide-y divide-gray-200">
+              <ul className="divide-y divide-gray-200 ">
                 {cart.map((producto) => (
-                  <li key={producto.title} className="p-6 hover:bg-gray-50 transition duration-150 ease-in-out">
+                  <li key={producto.title} className="p-6 border-solid border-2 rounded-lg shadow-lg hover:border-gray-300 transition duration-150 ease-in-out">
                     <div className="flex items-center space-x-4">
                       <div className="flex-shrink-0">
                         <img className="h-32 w-32 object-cover rounded-md" src={producto.imageUrl} alt={producto.title} />
@@ -32,13 +32,13 @@ export const Carrito: React.FC = () => {
                             <span className="px-3 py-1 text-gray-800 font-medium">{producto.quantity}</span>
                             <button onClick={() => addToCart(producto)} className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition">+</button>
                           </div>
+                        </div>
                           <button
                             onClick={() => removeItemFromCart(producto)}
-                            className="text-[#e76e49] hover:text-[#b84e40] transition"
+                            className="text-[#e76e49] hover:text-[#b84e40] transition py-2 hover:border-gray-300 px-5 shadow-lg rounded-lg border-2"
                           >
                             Eliminar
                           </button>
-                        </div>
                       </div>
                     </div>
                   </li>

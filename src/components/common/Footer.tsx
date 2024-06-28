@@ -7,6 +7,15 @@ import { Link } from 'react-router-dom'
 import LogoBlack from '../../assets/Renovartelogo(sm).png'
 
 export const Footer: React.FC = () => {
+
+    const handleWhatsapp = (e:  React.FormEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        const mensaje = "Hola! Me contacto desde su página web para realizar una consulta"
+        const numeroTel = '5493512399026';
+        const whatsappLink = `https://wa.me/${numeroTel}?text=${encodeURIComponent(mensaje)}`;
+        window.open(whatsappLink, '_blank')
+    }
+
     return (
         <div className='max-w-[1240px] mx-0 py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300 bg-gray-900'>
             <div>
@@ -16,7 +25,7 @@ export const Footer: React.FC = () => {
                 <div className='flex md:w-[75%] my-6 gap-4 mx-6'>
                     <a href='https://www.facebook.com/renovartecba/' target="_blank" rel="noopener noreferrer"><FaFacebookSquare size={30} /></a>
                     <a href='https://www.instagram.com/renovartecba/' target="_blank" rel="noopener noreferrer"><FaInstagram size={30} /></a>
-                    <a href='https://web.whatsapp.com/send?text=Hola%20Me%20contacto%20desde%20la%20web%20para%20realizar%20una%20consulta&phone=5493512399026' target="_blank" rel="noopener noreferrer"><FaWhatsapp size={30} /></a>
+                    <button onClick={handleWhatsapp}><FaWhatsapp size={30} /></button>
                 </div>
             </div>
             <div className='lg:col-span-2 flex justify-between mx-6'>

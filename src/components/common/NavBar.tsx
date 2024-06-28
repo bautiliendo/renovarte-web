@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import { AiOutlineShoppingCart, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import LogoBlack from '../../assets/Renovartelogo(sm).png'
 import { useCart } from '../../hooks/useCart';
 import { SearchBar } from '../SearchBar';
@@ -8,6 +8,8 @@ import { SearchBar } from '../SearchBar';
 export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pero es buena práctica
     const { cart } = useCart();
     const [nav, setNav] = useState<boolean>(false);
+    const { pathname } = useLocation();
+    const navigate = useNavigate()
 
     const handleNav = () => {
         setNav(!nav)
@@ -17,10 +19,20 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
         return cart.reduce((accum, item) => accum + item.quantity, 0);
     }, [cart]);
 
+
+    const handleLogoRedirect = (e: React.MouseEvent<HTMLImageElement>) => {
+        e.preventDefault();
+        if (pathname === '/'){
+            window.scrollTo(0, 0)
+        } else {
+            navigate('/')
+        }
+    }
+
     return (
         <div className='top-0 left-0 w-full z-50 bg-gray-900 fixed sm:sticky'>
             <div className='flex justify-between items-center h-20 max-w-[1240px] mx-auto px-4 text-white'>
-                <div className='w-full'><Link to='/'><img src={LogoBlack} style={{ width: 190 }} /></Link></div>
+                <div className='w-full'><img src={LogoBlack} style={{ width: 190, cursor:'pointer' }} onClick={handleLogoRedirect} alt='Logo' /></div>
                 <ul className='hidden md:flex'>
                     <SearchBar />
                     <li className='p-4 hover:scale-[1.04] '><Link to='/productos'>Productos</Link></li>
@@ -73,14 +85,14 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
                             <li className='p-4 border-b border-gray-600'>
                                 {cart.length >= 1 ? (
                                     <div className='flex gap-1 items-center'>
-                                        <Link to='/carrito' onClick={handleNav}><AiOutlineShoppingCart size={25} /></Link>
+                                        <Link to='/carrito' onClick={handleNav}><li className=' hover:underline'>Carrito</li></Link>
                                         <Link to='/carrito' className='mb-4' onClick={handleNav}>
                                             <button className='absolute bg-[#00df9a] text-black px-1.5 rounded-full text-xs' >{cartQuantity}</button>
                                         </Link>
                                     </div>
                                 )
                                     : (
-                                        <Link to='/carrito' onClick={handleNav}><AiOutlineShoppingCart size={25} /></Link>
+                                        <Link to='/carrito' onClick={handleNav}><li className=' hover:underline'>Carrito</li></Link>
                                     )
                                 }
                             </li>
