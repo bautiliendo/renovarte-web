@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import { AiOutlineShoppingCart, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import LogoBlack from '../../assets/Renovartelogo(sm).png'
 import { useCart } from '../../hooks/useCart';
 import { SearchBar } from '../SearchBar';
