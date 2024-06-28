@@ -21,7 +21,7 @@ export const Modal: React.FC<ModalProps> = ({ open, onClose }) => {
 
 
         const detalleCart = cart.map(product => `${product.quantity} ${product.title}`).join(', ');
-        const mensaje = `Hola! Mi nombre es ${nombre}. Me contacto desde su página web para coordinar la compra de:
+        const mensaje = `Hola! Mi nombre es ${nombre}. Me contacto desde su página web para preguntar por la compra de:
 
 *${detalleCart}*
 

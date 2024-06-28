@@ -1,9 +1,10 @@
 import { AiOutlineSearch } from "react-icons/ai";
 import { useState } from "react";
 import { useFiltersContext } from "../hooks/useFiltersContext";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const SearchBar: React.FC = () => {
+    const { pathname } = useLocation();
     const navigate = useNavigate();
     const [searchInput, setSearchInput] = useState('');
     const { setFilters } = useFiltersContext()
@@ -18,7 +19,10 @@ export const SearchBar: React.FC = () => {
             category: '',
             searched: searchInput
         });
-        navigate('/productos');
+        navigate('/productos')
+        if(pathname != '/') {
+            window.scrollTo(0, 0);
+        }
     }
 
     return (
