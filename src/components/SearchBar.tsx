@@ -20,7 +20,7 @@ export const SearchBar: React.FC = () => {
             searched: searchInput
         });
         navigate('/productos')
-        if(pathname != '/') {
+        if (pathname != '/') {
             window.scrollTo(0, 0);
         }
     }

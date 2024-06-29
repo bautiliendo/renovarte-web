@@ -24,9 +24,9 @@ export const RenderProducts: React.FC = () => {
                         {filteredProducts.map((producto) => {
                             const isProductOnCart = checkProductInCart(producto);
                             return (
-                                <li key={producto.title} className='border-solid border-2 rounded-lg shadow-lg md:max-w-[250px] md:min-w-[250px] max-w-[189px] min-w-[189px] py-6 flex flex-col items-center transition-transform transform hover:border-gray-300'>
+                                <li key={producto.title} className='border-solid border-2 rounded-lg shadow-lg sm:max-w-[250px] sm:min-w-[250px] max-w-[170px] min-w-[170px] py-6 flex flex-col items-center transition-transform transform hover:border-gray-300'>
                                     <img
-                                        style={{ width: 200, maxHeight: 200, minHeight: 200 }}
+                                        style={{ width: 200, maxHeight: 200, minHeight: 160 }}
                                         src={producto.imageUrl}
                                         alt={producto.title}
                                         className='py-2 px-2 ' />

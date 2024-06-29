@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export const Comprar: React.FC = () => {
   return (
     <div className="w-full bg-white py-32 px-4 ">

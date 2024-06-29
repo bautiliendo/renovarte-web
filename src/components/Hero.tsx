@@ -16,12 +16,12 @@ export const Hero: React.FC = () => {
 
   return (
     <>
-      <section className="py-10 bg-gray-900 sm:py-16 lg:py-24 hidden 1050px:block">
+      <section className="py-10 bg-gray-900 sm:py-16 lg:py-24">
         <div className="px-4 mx-auto sm:px-6 lg:px-10 max-w-6xl text-white">
-          <div className="flex items-end justify-between ">
-            <div className="flex-1 text-center lg:text-left">
+          <div className="flex items-end justify-between mt-40 sm:mt-0">
+            <div className="flex-1 text-left">
               <h2 className="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl text-white">RENOVARTE - Córdoba AR</h2>
-              <p className="max-w-xl mx-auto mt-4 text-base leading-relaxed lg:mx-0 text-white">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa</p>
+              <p className="max-w-xl  mt-4 text-base leading-relaxed lg:mx-0 text-white">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa</p>
               <div>
                 <p className='md:text-3xl sm:text-2xl text-xl font-bold'>
                   Beneficios exclusivos y convenios con mutuales
@@ -95,7 +95,7 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded shadow">
+            <div className="overflow-hidden bg-white rounded shadow hidden sm:block">
               <div className="p-5">
                 <div className="relative flex justify-center">
                   <div className="block aspect-w-4 aspect-h-3">
@@ -152,7 +152,7 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded shadow">
+            <div className="overflow-hidden bg-white rounded shadow hidden sm:block">
               <div className="p-5">
                 <div className="relative flex justify-center">
                   <div className="block aspect-w-4 aspect-h-3">

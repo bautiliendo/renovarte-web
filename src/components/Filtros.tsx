@@ -18,7 +18,7 @@ export const Filtros: React.FC = () => {
   }
 
   return (
-    <div className="w-full overflow-x-auto py-5">
+    <div className="w-full overflow-x-auto py-5 my-5">
       <div className="inline-flex justify-start min-w-max px-4">
         <ul className="flex gap-2">
           <li><button onClick={handleChangeCategory} value='celulares' className="border font-medium px-2 py-2 hover:rounded-md flex flex-col items-center transition-transform transform hover:border-gray-300" >Celulares <img src={Celular} style={{ width: 90, height: 80 }} /> </button></li>

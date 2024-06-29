@@ -5,7 +5,7 @@ import LogoBlack from '../../assets/Renovartelogo(sm).png'
 import { useCart } from '../../hooks/useCart';
 import { SearchBar } from '../SearchBar';
 
-export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pero es buena práctica
+export const NavBar: React.FC = () => {
     const { cart } = useCart();
     const [nav, setNav] = useState<boolean>(false);
     const { pathname } = useLocation();
@@ -22,7 +22,7 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
 
     const handleLogoRedirect = (e: React.MouseEvent<HTMLImageElement>) => {
         e.preventDefault();
-        if (pathname === '/'){
+        if (pathname === '/') {
             window.scrollTo(0, 0)
         } else {
             navigate('/')
@@ -32,12 +32,12 @@ export const NavBar: React.FC = () => { //React.FC --> typescript lo infiere, pe
     return (
         <div className='top-0 left-0 w-full z-50 bg-gray-900 fixed sm:sticky'>
             <div className='flex justify-between items-center h-20 max-w-[1240px] mx-auto px-4 text-white'>
-                <div className='w-full'><img src={LogoBlack} style={{ width: 190, cursor:'pointer' }} onClick={handleLogoRedirect} alt='Logo' /></div>
+                <div className='w-full'><img src={LogoBlack} style={{ width: 190, cursor: 'pointer' }} onClick={handleLogoRedirect} alt='Logo' /></div>
                 <ul className='hidden md:flex'>
                     <SearchBar />
-                    <li className='p-4 hover:scale-[1.04] '><Link to='/productos'>Productos</Link></li>
-                    <li className='p-4 hover:scale-[1.04]'><Link to='/comprar'>Comprar</Link></li>
-                    <li className='p-4 hover:scale-[1.04] '><Link to='/empresa'>Empresa</Link></li>
+                    <li className='p-4 hover:scale-[1.04] hidden 1050px:block'><Link to='/productos'>Productos</Link></li>
+                    <li className='p-4 hover:scale-[1.04] hidden 1050px:block'><Link to='/comprar'>Comprar</Link></li>
+                    <li className='p-4 hover:scale-[1.04] hidden 1050px:block'><Link to='/empresa'>Empresa</Link></li>
                 </ul>
                 <div className='mr-10 ml-10 hidden md:flex hover:scale-[1.04] mt-1'>
                     {
