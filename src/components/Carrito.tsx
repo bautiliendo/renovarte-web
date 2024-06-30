@@ -19,7 +19,7 @@ export const Carrito: React.FC = () => {
             <div className="bg-white shadow overflow-hidden sm:rounded-lg">
               <ul className="divide-y divide-gray-200 ">
                 {cart.map((producto) => (
-                  <li key={producto.title} className="p-6 border-solid border-2 rounded-lg shadow-lg hover:border-gray-300 transition duration-150 ease-in-out">
+                  <li key={producto.title} className="p-6 border-solid border-2 rounded-lg shadow-lg">
                     <div className="flex items-center space-x-4">
                       <div className="flex-shrink-0">
                         <img className="h-32 w-32 object-cover rounded-md" src={producto.imageUrl} alt={producto.title} />
@@ -29,13 +29,13 @@ export const Carrito: React.FC = () => {
                         <div className="flex items-center space-x-4 mt-2">
                           <div className="flex items-center border rounded-md">
                             <button onClick={() => removeFromCart(producto)} className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition">-</button>
-                            <span className="px-3 py-1 text-gray-800 font-medium">{producto.quantity}</span>
+                            <span className="px-3 py-1 my-1 text-gray-800 font-medium">{producto.quantity}</span>
                             <button onClick={() => addToCart(producto)} className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition">+</button>
                           </div>
                         </div>
                           <button
                             onClick={() => removeItemFromCart(producto)}
-                            className="text-[#e76e49] hover:text-[#b84e40] transition py-2 hover:border-gray-300 px-5 shadow-lg rounded-lg border-2"
+                            className="text-[#e76e49] hover:text-[#b84e40] transition py-2 my-1 px-5 rounded-lg border-2"
                           >
                             Eliminar
                           </button>

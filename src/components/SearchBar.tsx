@@ -31,7 +31,7 @@ export const SearchBar: React.FC = () => {
                 <input
                     type='text'
                     placeholder='Buscar producto'
-                    className="md:w-[300px] w-full text-black px-5 py-2 border border-gray-500 rounded-md hover:border-black"
+                    className="lg:w-[300px] md:w-[200px] w-full text-black px-5 py-2 border border-gray-500 rounded-md hover:border-black"
                     value={searchInput}
                     onChange={handleSearchInputChange}
                 />

@@ -6,22 +6,25 @@ import Tv from '../assets/tvNoblex.png'
 import Cafetera from '../assets/cafetera.png'
 import { useCart } from '../hooks/useCart';
 import { Producto } from '../types';
+import { useNavigate } from 'react-router-dom';
 
 export const Hero: React.FC = () => {
   const { addToCart, cart, removeItemFromCart } = useCart();
-
+  const navigate = useNavigate();
   const checkProductInCart = (product: Producto) => {
     return cart.some(item => item.title === product.title);
   }
 
   return (
+
     <>
-      <section className="py-10 bg-gray-900 sm:py-16 lg:py-24">
+      <section className="my-4 bg-gray-900 sm:py-16 lg:py-24 ">
         <div className="px-4 mx-auto sm:px-6 lg:px-10 max-w-6xl text-white">
-          <div className="flex items-end justify-between mt-40 sm:mt-0">
+          <div className="flex items-end justify-between mt-40 sm:mt-0 ">
             <div className="flex-1 text-left">
-              <h2 className="text-2xl font-bold leading-tight sm:text-4xl lg:text-5xl text-white py-5">RENOVARTE - Córdoba AR</h2>
-              <p className="max-w-xl  mt-4 text-base leading-relaxed lg:mx-0 text-white hidden sm:block">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa</p>
+              <h2 className="text-2xl font-bold leading-tight sm:text-4xl lg:text-5xl text-white pt-5">RENOVARTE - Córdoba AR</h2>
+              <p className="max-w-xl my-4 text-base leading-relaxed lg:mx-0 text-white hidden sm:block">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa</p>
+              <button  onClick={() => navigate('/empresa')} className="my-4 bg-[#00df9a] text-gray-900 hover:bg-[#1ea77b] text-sm py-2 px-6 rounded-full font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg mt-5 block 1050px:hidden">Conocer más</button>
               <div>
                 <p className='md:text-3xl sm:text-2xl text-xl font-bold'>
                   Beneficios exclusivos y convenios con mutuales

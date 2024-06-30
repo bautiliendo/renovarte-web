@@ -10,6 +10,7 @@ import { Empresa } from './components/Empresa';
 import { ScrollTop } from './helpers/ScrollTop';
 import { Comprar } from './components/Comprar';
 import { FiltersProvider } from './context/filters';
+import { BotonWsp } from './components/BotonWsp';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/politicapriv" element={<PoliticaPrivacidad />} />
         <Route path="/terminosycond" element={<TerminosyCond />} />
       </Routes>
+      <BotonWsp />
       <Footer />
     </FiltersProvider>
   )

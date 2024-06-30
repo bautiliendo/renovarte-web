@@ -8,7 +8,7 @@ import LogoBlack from '../../assets/Renovartelogo(sm).png'
 
 export const Footer: React.FC = () => {
 
-    const handleWhatsapp = (e:  React.FormEvent<HTMLButtonElement>) => {
+    const handleWhatsapp = (e: React.FormEvent<HTMLButtonElement>) => {
         e.preventDefault();
         const mensaje = "Hola! Me contacto desde su página web para realizar una consulta"
         const numeroTel = '5493512399026';
