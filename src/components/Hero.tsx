@@ -18,17 +18,14 @@ export const Hero: React.FC = () => {
   return (
 
     <>
-      <section className="my-4 bg-gray-900 sm:py-16 lg:py-24 h-[90vh] flex flex-col justify-center">
+      <section className="bg-gray-900 sm:py-16 lg:py-24 min-h-[90vh] flex flex-col justify-center">
         <div className="px-4 mx-auto sm:px-6 lg:px-10 max-w-6xl text-white h-full flex flex-col justify-center">
 
-          <div className="flex flex-col justify-between sm:mt-0 pb-4">
+          <div className="flex flex-col justify-between pb-4 mt-20 sm:mt-16 md:mt-0">
             <div className="flex-1 text-left">
-              <h2 className="text-2xl font-bold leading-tight sm:text-4xl lg:text-5xl text-white pt-5 mb-4">RENOVARTE - Córdoba AR</h2>
-
-              <p className="max-w-xl mb-4 text-sm sm:text-base leading-relaxed lg:mx-0 text-white">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa</p>
-
+              <h2 className="text-xl xs:text-2xl font-bold leading-tight sm:text-4xl lg:text-5xl text-white pt-5 mb-4">RENOVARTE - Córdoba AR</h2>
+              <p className="max-w-xl mb-4 text-sm sm:text-base leading-relaxed lg:mx-0 text-white hidden xs:block">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa</p>
               <button onClick={() => navigate('/empresa')} className="mb-4 bg-[#00df9a] text-gray-900 hover:bg-[#1ea77b] text-sm py-2 px-6 rounded-full font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg sm:hidden">Conocer más</button>
-
               <div>
                 <p className='text-lg sm:text-2xl md:text-3xl font-bold mb-2'>
                   Beneficios exclusivos y convenios con mutuales
@@ -44,7 +41,7 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
+          <div className="hidden sm:grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
 
             <div className="overflow-hidden bg-white rounded shadow hidden sm:block">
               <div className="p-5">
