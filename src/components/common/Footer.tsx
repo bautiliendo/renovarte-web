@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
             </div>
             <div className='lg:col-span-2 flex justify-between mx-6'>
                 <div>
-                    <h6 className='font-medium text-gray-400'>Navegación</h6>
+                    <h6 className='font-medium text-gray-400 text-sm sm:text-base'>Navegación</h6>
                     <ul>
                         <li className='py-2 text-sm hover:underline'><Link to='/'>Inicio</Link></li>
                         <li className='py-2 text-sm hover:underline'><Link to='/productos'>Productos</Link></li>
@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
                     </ul>
                 </div>
                 <div>
-                    <h6 className='font-medium text-gray-400'>Horarios de atención</h6>
+                    <h6 className='font-medium text-gray-400 text-sm sm:text-base'>Horarios de atención</h6>
                     <ul>
                         <li className='py-2 text-sm font-bold'>Lunes a Viernes</li>
                         <p className='text-sm'>de 9:00 hs. a 18:00 hs.</p>
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
                     </ul>
                 </div>
                 <div>
-                    <h6 className='font-medium text-gray-400'>Redes</h6>
+                    <h6 className='font-medium text-gray-400 text-sm sm:text-base'>Redes</h6>
                     <ul>
                         <a href='https://www.facebook.com/renovartecba/' target="_blank" rel="noopener noreferrer">
                             <li className='py-2 text-sm hover:text-blue-400 hover:underline list-none'>Facebook</li>
