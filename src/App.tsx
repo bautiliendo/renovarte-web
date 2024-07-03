@@ -1,6 +1,7 @@
 import { NavBar } from './components/common/NavBar'
 import { Hero } from './components/Hero'
 import { Productos } from './components/Productos'
+import { ProductDetail } from './components/ProductDetail'
 import { Footer } from './components/common/Footer'
 import { Routes, Route } from "react-router-dom";
 import { PoliticaPrivacidad } from './components/PoliticaPrivacidad';
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/productos" element={<Productos />} />
+        <Route path="/productos/:productoTitle" element={<ProductDetail />} />
         <Route path="/comprar" element={<Comprar />} />
         <Route path="/empresa" element={<Empresa />} />
         <Route path="/carrito" element={<Carrito />} />

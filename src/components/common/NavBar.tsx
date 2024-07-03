@@ -39,38 +39,39 @@ export const NavBar: React.FC = () => {
                     <li className='p-4 hover:scale-[1.04] hidden 1050px:block'><Link to='/comprar'>Comprar</Link></li>
                     <li className='p-4 hover:scale-[1.04] hidden 1050px:block'><Link to='/empresa'>Empresa</Link></li>
                 </ul>
-                <div className='mr-10 ml-10 hidden md:flex hover:scale-[1.04] mt-1'>
+                <div className='mx-10 hidden md:flex hover:scale-[1.04]'>
+                    <Link to='/carrito'><AiOutlineShoppingCart size={25} /></Link>
                     {
                         cart.length >= 1 ? (
-                            <div className='flex gap-1 items-center'>
-                                <Link to='/carrito'><AiOutlineShoppingCart size={25} /></Link>
-                                <Link to='/carrito' className='mb-4'>
-                                    <button className='absolute bg-[#00df9a] text-black px-1.5 rounded-full text-xs' >{cartQuantity}</button>
-                                </Link>
-                            </div>
+                            <Link to='/carrito'>
+                                <button className='absolute bg-[#00df9a] text-black px-1.5 rounded-full text-xs my-1.5' >{cartQuantity}</button>
+                            </Link>
                         )
-                            : (
-                                <Link to='/carrito'><AiOutlineShoppingCart size={25} /></Link>
-                            )
+                            : ''
+
                     }
                 </div>
 
-                <div className='block md:hidden'>
-                    <div className='flex gap-8'>
-                        {
-                            cart.length >= 1 ? (
-                                <div className='flex gap-1 items-center'>
-                                    <Link to='/carrito'><AiOutlineShoppingCart size={25} /></Link>
-                                    <Link to='/carrito' className='mb-4'>
-                                        <button className='absolute bg-[#00df9a] text-black px-1.5 rounded-full text-xs' >{cartQuantity} </button>
-                                    </Link>
-                                </div>
-                            )
-                                : (
-                                    <Link to='/carrito'><AiOutlineShoppingCart size={25} /></Link>
-                                )
-                        }
-                        {nav ? <AiOutlineClose size={25} onClick={handleNav} /> : <AiOutlineMenu size={25} onClick={handleNav} />}
+                <div className='flex md:hidden items-center justify-between w-24'>
+                    <div className='relative'>
+                        <div className='flex items-center'>
+                            <Link to='/carrito'>
+                                <AiOutlineShoppingCart size={25} />
+                            </Link>
+                            {cart.length >= 1 && (
+                                <Link to='/carrito'>
+                                    <button className='ml-1 bg-[#00df9a] text-black px-1.5 rounded-full text-xs'>{cartQuantity}</button>
+                                </Link>
+                            )}
+                        </div>
+                    </div>
+
+                    <div>
+                        {nav ? (
+                            <AiOutlineClose size={25} onClick={handleNav} />
+                        ) : (
+                            <AiOutlineMenu size={25} onClick={handleNav} />
+                        )}
                     </div>
                 </div>
                 <div onClick={handleNav} className={nav ? 'pt-6 fixed left-0 top-0 w-[100%] h-full z-50 bg-black bg-opacity-30 md:hidden' : ''}>

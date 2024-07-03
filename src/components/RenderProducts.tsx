@@ -5,6 +5,7 @@ import { useCart } from '../hooks/useCart';
 import { useFiltersContext } from '../hooks/useFiltersContext';
 import allProducts from '../data/products.json'
 import { BusquedaVacia } from './BusquedaVacia';
+import { Link } from 'react-router-dom';
 
 export const RenderProducts: React.FC = () => {
     const [productos] = useState(allProducts);
@@ -29,11 +30,13 @@ export const RenderProducts: React.FC = () => {
                                         style={{ width: 200, maxHeight: 200, minHeight: 160 }}
                                         src={producto.imageUrl}
                                         alt={producto.title}
-                                        className='py-2 px-2 ' />
+                                        className='py-2 px-2'/>
                                     <div className='flex flex-col flex-grow items-center'>
-                                        <div className='font-semibold text-center text-sm' style={{ minHeight: '4em' }}>
+                                        <Link to={`/productos/${encodeURIComponent(producto.title)}`}>
+                                        <div className='font-semibold text-center text-sm' style={{ minHeight: '5em' }}>
                                             {producto.title}
                                         </div>
+                                        </Link>
                                         <div className='mt-2'>
                                             {
                                                 isProductOnCart

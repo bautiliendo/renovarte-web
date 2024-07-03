@@ -15,14 +15,17 @@ export const SearchBar: React.FC = () => {
 
     const handleSearch = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        setFilters({
-            category: '',
-            searched: searchInput
-        });
-        navigate('/productos')
-        if (pathname != '/') {
-            window.scrollTo(0, 0);
-        }
+        if ((searchInput != '') && !(searchInput.startsWith(' '))) {
+
+            setFilters({
+                category: '',
+                searched: searchInput
+            });
+            navigate('/productos')
+            if (pathname != '/') {
+                window.scrollTo(0, 0);
+            }
+        } else return
     }
 
     return (

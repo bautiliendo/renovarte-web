@@ -8,7 +8,9 @@ export const Productos: React.FC = () => {
       <div className='block md:hidden fixed top-16 left-0 right-0 bg-gray-900 py-2.5 w-full z-10'>
         <SearchBar />
       </div>
+      <div className='mt-32 sm:mt-8'>
       <Filtros />
+      </div>
       <RenderProducts />
     </div>
   )

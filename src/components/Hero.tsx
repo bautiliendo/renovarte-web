@@ -1,12 +1,14 @@
 import React from 'react'
 import { ReactTyped } from "react-typed";
-import { Productos } from './Productos';
 import Celular from '../assets/calulara05.png'
 import Tv from '../assets/tvNoblex.png'
 import Cafetera from '../assets/cafetera.png'
 import { useCart } from '../hooks/useCart';
 import { Producto } from '../types';
 import { useNavigate } from 'react-router-dom';
+import { RenderProducts } from './RenderProducts';
+import { Filtros } from './Filtros';
+import { SearchBar } from './SearchBar';
 
 export const Hero: React.FC = () => {
   const { addToCart, cart, removeItemFromCart } = useCart();
@@ -18,27 +20,27 @@ export const Hero: React.FC = () => {
   return (
 
     <>
-      <section className="bg-gray-900 sm:py-16 lg:py-24 min-h-[90vh] flex flex-col justify-center">
-  <div className="px-4 mx-auto sm:px-6 lg:px-10 max-w-6xl text-white h-full flex flex-col justify-center">
-    <div className="flex flex-col justify-between pb-4 mt-20 xs:mt-10 sm:mt-16 md:mt-0">
-      <div className="flex-1 text-left">
-        <h2 className="text-xl xs:text-2xl font-bold leading-tight sm:text-4xl lg:text-5xl text-white pt-5 mb-4">RENOVARTE - Córdoba AR</h2>
-        <p className="max-w-xl mb-4 text-sm sm:text-base leading-relaxed lg:mx-0 text-white hidden xs:block">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa</p>
-        <button onClick={() => navigate('/empresa')} className="mb-4 bg-[#00df9a] text-gray-900 hover:bg-[#1ea77b] text-sm py-2 px-6 rounded-full font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg sm:hidden">Conocer más</button>
-        <div>
-          <p className='text-lg sm:text-2xl md:text-3xl font-bold mb-2'>
-            Beneficios exclusivos y convenios con mutuales
-          </p>
-          <ReactTyped
-            className='text-lg sm:text-2xl md:text-3xl font-bold text-[#00df9a]'
-            strings={['SUOEM', '3 ABRIL', 'UPCN']}
-            typeSpeed={70}
-            backSpeed={50}
-            loop
-          />
-        </div>
-      </div>
-    </div>
+      <section className="bg-gray-900 min-h-[100vh] flex flex-col">
+        <div className="mx-auto max-w-6xl text-white mt-32 py-10 md:mt-0 md:py-10">
+          <div className="flex flex-col justify-between mx-1">
+            <div className="flex-1 text-left ">
+              <h2 className="text-xl xs:text-2xl font-bold leading-tight sm:text-4xl lg:text-5xl text-white pb-1">RENOVARTE - Córdoba AR</h2>
+              <p className="max-w-xl text-sm sm:text-base leading-relaxed text-white hidden xs:block py-1">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa</p>
+              <button onClick={() => navigate('/productos')} className="mb-4 bg-[#00df9a] text-gray-900 hover:bg-[#1ea77b] text-sm my-2 py-2 px-6 rounded-full font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg sm:hidden">Ver productos</button>
+              <div>
+                <p className='text-lg sm:text-2xl md:text-3xl font-bold'>
+                  Beneficios exclusivos y convenios con mutuales
+                </p>
+                <ReactTyped
+                  className='text-lg sm:text-2xl md:text-3xl font-bold text-[#00df9a]'
+                  strings={['SUOEM', '3 ABRIL', 'UPCN']}
+                  typeSpeed={70}
+                  backSpeed={50}
+                  loop
+                />
+              </div>
+            </div>
+          </div>
 
           <div className="hidden sm:grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
 
@@ -213,7 +215,14 @@ export const Hero: React.FC = () => {
           </div>
         </div>
       </section>
-      <Productos />
+      {/* <Productos /> */}
+      <div className='w-full bg-white text-center py-4 justify-center'>
+        <div className='block md:hidden fixed top-16 left-0 right-0 bg-gray-900 py-2.5 w-full z-10'>
+          <SearchBar />
+        </div>
+        <Filtros />
+        <RenderProducts />
+      </div>
     </>
   )
 }
