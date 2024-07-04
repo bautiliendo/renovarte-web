@@ -37,7 +37,7 @@ export const ProductDetail = () => {
             <p className='py-2'>Obten más <strong>información y precio</strong> del producto, añadiendolo al carrito, <Link to='/carrito' className='underline text-[#1ea77b]'>dirigiendote al mismo</Link> y tocando el botón Consultar.</p>
             </>
           ) : (
-            <p className='py-2'>Para obtener información acerca del <strong>precio y detalles</strong> del producto , recuerda que debes añadirlo al carrito,<Link to='/carrito' className='underline text-[#1ea77b]'> dirigiendote al mismo</Link> y tocando el botón Consultar.</p>
+            <p className='py-2'>Para obtener información acerca del <strong>precio y detalles</strong> del producto , recuerda que debes añadirlo al carrito,<Link to='/carrito' className='underline text-[#1ea77b]'> dirigirte al mismo</Link> y tocar el botón Consultar.</p>
           )
           }</p>
 
