@@ -48,7 +48,7 @@ export const Modal: React.FC<ModalProps> = ({ open, onClose }) => {
         <div onClick={onClose} className="bg-black bg-opacity-50 fixed inset-0 flex items-center justify-center">
             <div onClick={(e) => {
                 e.stopPropagation();
-            }} className="bg-gray-200 w-full max-w-[600px] shadow-xl relative rounded-lg mx-8">
+            }} className="bg-white w-full max-w-[600px] shadow-xl relative rounded-lg mx-8">
                 <div className="flex justify-end">
                     <button onClick={onClose} className="p-4 absolute hover:text-red-800">
                         <MdOutlineClose />
@@ -76,7 +76,7 @@ export const Modal: React.FC<ModalProps> = ({ open, onClose }) => {
                             <option value="Otro">Otro</option>
                         </select>
                     </div>
-                    <button
+                    <button 
                         type="submit"
                         className="flex items-center gap-2 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition">
                         <FaWhatsapp size={30} />

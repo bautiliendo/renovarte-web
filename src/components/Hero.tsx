@@ -5,7 +5,7 @@ import Tv from '../assets/tvNoblex.png'
 import Cafetera from '../assets/cafetera.png'
 import { useCart } from '../hooks/useCart';
 import { Producto } from '../types';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { RenderProducts } from './RenderProducts';
 import { Filtros } from './Filtros';
 import { SearchBar } from './SearchBar';
@@ -46,19 +46,21 @@ export const Hero: React.FC = () => {
 
             <div className="overflow-hidden bg-white rounded shadow hidden sm:block">
               <div className="p-5">
-                <div className="relative flex justify-center">
-                  <div className="block aspect-w-4 aspect-h-3">
-                    <img className="object-cover w-full h-full" src={Cafetera} alt="cafetera" style={{ width: 290, height: 250 }} />
-                  </div>
+                <Link to={`/productos/${encodeURIComponent("CAFETERA ATMA CA-8182 FILTRO")}`}>
+                  <div className="relative flex justify-center">
+                    <div className="block aspect-w-4 aspect-h-3">
+                      <img className="object-cover w-full h-full" src={Cafetera} alt="cafetera" style={{ width: 290, height: 250 }} />
+                    </div>
 
-                  <div className="absolute top-4 left-4">
-                    <span className="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full hover:border hover:border-gray-600"> Producto destacado </span>
+                    <div className="absolute top-4 left-4">
+                      <span className="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full hover:border hover:border-gray-600"> Producto destacado </span>
+                    </div>
                   </div>
-                </div>
-                <p className="mt-5 text-2xl font-semibold">
-                  <p className="text-black"> Cafetera ATMA Filtro</p>
-                </p>
-                <p className="mt-4 text-base text-gray-600">Disfruta del sabor auténtico con la Cafetera ATMA Filtro</p>
+                  <p className="mt-5 text-2xl font-semibold">
+                    <p className="text-black"> Cafetera ATMA Filtro</p>
+                  </p>
+                  <p className="mt-4 text-base text-gray-600">Disfruta del sabor auténtico con la Cafetera ATMA Filtro</p>
+                </Link>
                 {
                   !checkProductInCart({
                     "price": "",
@@ -102,20 +104,22 @@ export const Hero: React.FC = () => {
 
             <div className="overflow-hidden bg-white rounded shadow hidden sm:block">
               <div className="p-5">
-                <div className="relative flex justify-center">
-                  <div className="block aspect-w-4 aspect-h-3">
-                    <img className="object-cover w-full h-full" src={Tv} alt="Tv noblex" style={{ width: 500, height: 250 }} />
+                <Link to={`/productos/${encodeURIComponent("TV LED NOBLEX DK43X7100 FHD ANDROID")}`}>
+                  <div className="relative flex justify-center">
+                    <div className="block aspect-w-4 aspect-h-3">
+                      <img className="object-cover w-full h-full" src={Tv} alt="Tv noblex" style={{ width: 500, height: 250 }} />
+                    </div>
+
+                    <div className="absolute top-4 left-4">
+                      <span className="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full hover:border hover:border-gray-600"> Producto destacado </span>
+                    </div>
                   </div>
 
-                  <div className="absolute top-4 left-4">
-                    <span className="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full hover:border hover:border-gray-600"> Producto destacado </span>
-                  </div>
-                </div>
-
-                <p className="mt-5 text-2xl font-semibold">
-                  <p className="text-black">TV NOBLEX FHD Android </p>
-                </p>
-                <p className="mt-4 text-base text-gray-600">¡Disfruta la Copa América y la Eurocopa con el TV NOBLEX FHD Android!</p>
+                  <p className="mt-5 text-2xl font-semibold">
+                    <p className="text-black">TV NOBLEX FHD Android </p>
+                  </p>
+                  <p className="mt-4 text-base text-gray-600">¡Disfruta la Copa América y la Eurocopa con el TV NOBLEX FHD Android!</p>
+                </Link>
                 {
                   !checkProductInCart({
                     "price": "",
@@ -159,19 +163,21 @@ export const Hero: React.FC = () => {
 
             <div className="overflow-hidden bg-white rounded shadow hidden sm:block">
               <div className="p-5">
-                <div className="relative flex justify-center">
-                  <div className="block aspect-w-4 aspect-h-3">
-                    <img className="object-cover w-full h-full" src={Celular} alt="Celular samsung a05" style={{ width: 170, height: 250 }} />
-                  </div>
+                <Link to={`/productos/${encodeURIComponent("Celular Samsung Galaxy A05 6.7\" 4/64GB Black")}`}>
+                  <div className="relative flex justify-center">
+                    <div className="block aspect-w-4 aspect-h-3">
+                      <img className="object-cover w-full h-full" src={Celular} alt="Celular samsung a05" style={{ width: 170, height: 250 }} />
+                    </div>
 
-                  <div className="absolute top-4 left-4">
-                    <span className="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full hover:border hover:border-gray-600"> Producto destacado </span>
+                    <div className="absolute top-4 left-4">
+                      <span className="px-4 py-2 text-xs font-semibold tracking-widest text-gray-900 uppercase bg-white rounded-full hover:border hover:border-gray-600"> Producto destacado </span>
+                    </div>
                   </div>
-                </div>
-                <p className="mt-5 text-2xl font-semibold">
-                  <p className="text-black"> SAMSUNG Galaxy A05 </p>
-                </p>
-                <p className="mt-4 text-base text-gray-600">Pantalla HD 6.7" 4/64GB. Rendimiento fluido y eficiente</p>
+                  <p className="mt-5 text-2xl font-semibold">
+                    <p className="text-black"> SAMSUNG Galaxy A05 </p>
+                  </p>
+                  <p className="mt-4 text-base text-gray-600">Pantalla HD 6.7" 4/64GB. Rendimiento fluido y eficiente</p>
+                </Link>
                 {
                   !checkProductInCart({
                     "price": "",

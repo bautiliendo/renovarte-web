@@ -13,9 +13,9 @@ export const Carrito: React.FC = () => {
   return (
     <>
       {cart.length >= 1 ? (
-        <div className="bg-gray-100 py-32 -z-10">
+        <div className="bg-white py-32 -z-10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="md:text-3xl sm:text2-xl text-xl py-4 font-bold text-gray-900 text-center">Mi carrito</h1>
+            <h1 className="md:text-3xl text-2xl font-bold pb-6">Mi carrito</h1>
             <div className="bg-white shadow overflow-hidden sm:rounded-lg">
               <ul className="divide-y divide-gray-200 ">
                 {cart.map((producto) => (
@@ -25,7 +25,7 @@ export const Carrito: React.FC = () => {
                         <img className="h-32 w-32 object-cover rounded-md" src={producto.imageUrl} alt={producto.title} />
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-md font-medium text-gray-900">{producto.title}</p>
+                        <p className="text-lg font-bold mb-4 p-2">{producto.title}</p>
                         <div className="flex items-center space-x-4 mt-2">
                           <div className="flex items-center border rounded-md">
                             <button onClick={() => removeFromCart(producto)} className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition">-</button>
@@ -33,12 +33,12 @@ export const Carrito: React.FC = () => {
                             <button onClick={() => addToCart(producto)} className="px-3 py-1 text-gray-600 hover:bg-gray-100 transition">+</button>
                           </div>
                         </div>
-                          <button
-                            onClick={() => removeItemFromCart(producto)}
-                            className="text-[#e76e49] hover:text-[#b84e40] transition py-2 my-1 px-5 rounded-lg border-2"
-                          >
-                            Eliminar
-                          </button>
+                        <button
+                          onClick={() => removeItemFromCart(producto)}
+                          className="text-[#e76e49] hover:text-[#b84e40] transition py-2 my-1 px-5 rounded-lg border-2"
+                        >
+                          Eliminar
+                        </button>
                       </div>
                     </div>
                   </li>
