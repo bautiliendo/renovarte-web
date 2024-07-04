@@ -48,7 +48,7 @@ export const Modal: React.FC<ModalProps> = ({ open, onClose }) => {
         <div onClick={onClose} className="bg-black bg-opacity-50 fixed inset-0 flex items-center justify-center">
             <div onClick={(e) => {
                 e.stopPropagation();
-            }} className="bg-white w-full max-w-[600px] shadow-xl relative rounded-lg mx-8">
+            }} className="bg-gray-300 w-full max-w-[600px] shadow-xl relative rounded-lg mx-8">
                 <div className="flex justify-end">
                     <button onClick={onClose} className="p-4 absolute hover:text-red-800">
                         <MdOutlineClose />
@@ -70,13 +70,13 @@ export const Modal: React.FC<ModalProps> = ({ open, onClose }) => {
                     <div className="mb-4">
                         <label htmlFor="mutual" className="block mb-1 text-sm font-medium text-gray-900 dark:text-white">Mutual</label>
                         <select id="mutual" className="border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:bg-gray-700 dark:focus:border-blue-500 dark:focus:ring-blue-500">
-                            <option value="SUOEM" selected>SUOEM</option>
+                            <option value="SUOEM">SUOEM</option>
                             <option value="UPCN">UPCN</option>
-                            <option value="3 Abril">3 Abril</option>
-                            <option value="Otro">Otro</option>
+                            <option value="3 Abril" selected>3 Abril</option>
+                            <option value="Otro">Otro / Ninguna</option>
                         </select>
                     </div>
-                    <button 
+                    <button
                         type="submit"
                         className="flex items-center gap-2 px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition">
                         <FaWhatsapp size={30} />
