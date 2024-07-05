@@ -3,7 +3,7 @@ import { Hero } from './components/Hero'
 import { Productos } from './components/Productos'
 import { ProductDetail } from './components/ProductDetail'
 import { Footer } from './components/common/Footer'
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import { PoliticaPrivacidad } from './components/PoliticaPrivacidad';
 import { TerminosyCond } from './components/TerminosyCond';
 import { Carrito } from './components/Carrito';
@@ -27,6 +27,7 @@ function App() {
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/politicapriv" element={<PoliticaPrivacidad />} />
         <Route path="/terminosycond" element={<TerminosyCond />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <BotonWsp />
       <Footer />

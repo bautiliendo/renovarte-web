@@ -20,13 +20,13 @@ export const Hero: React.FC = () => {
   return (
 
     <>
-      <section className="bg-gray-900 min-h-[100vh] flex flex-col">
+      <section className="bg-gray-900 min-h-[100vh] flex flex-col mx-2">
         <div className="mx-auto max-w-6xl text-white mt-32 py-10 md:mt-0 md:py-10">
           <div className="flex flex-col justify-between mx-1">
             <div className="flex-1 text-left ">
               <h2 className="text-xl xs:text-2xl font-bold leading-tight sm:text-4xl lg:text-5xl text-white pb-1">RENOVARTE - Córdoba AR</h2>
-              <p className="max-w-xl text-sm sm:text-base leading-relaxed text-white hidden xs:block py-1">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa</p>
-              <button onClick={() => navigate('/productos')} className="mb-4 bg-[#00df9a] text-gray-900 hover:bg-[#1ea77b] text-sm my-2 py-2 px-6 rounded-full font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg sm:hidden">Ver productos</button>
+              <p className="max-w-xl text-sm sm:text-base leading-relaxed text-white hidden sm:block py-1">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa</p>
+              <button onClick={() => navigate('/comprar')} className="mb-4 bg-[#00df9a] text-gray-900 hover:bg-[#1ea77b] text-sm my-2 py-2 px-6 rounded-full font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg sm:hidden">¿Cómo Comprar?</button>
               <div>
                 <p className='text-lg sm:text-2xl md:text-3xl font-bold'>
                   Beneficios exclusivos y convenios con mutuales
@@ -42,7 +42,7 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="hidden sm:grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
+          <div className="sm:grid max-w-md grid-cols-1 gap-6 mx-auto mt-8 lg:mt-16 lg:grid-cols-3 lg:max-w-full">
 
             <div className="overflow-hidden bg-white rounded shadow hidden sm:block">
               <div className="p-5">
@@ -102,7 +102,7 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            <div className="overflow-hidden bg-white rounded shadow hidden sm:block">
+            <div className="overflow-hidden bg-white rounded shadow sm:block">
               <div className="p-5">
                 <Link to={`/productos/${encodeURIComponent("TV LED NOBLEX DK43X7100 FHD ANDROID")}`}>
                   <div className="relative flex justify-center">
@@ -124,8 +124,8 @@ export const Hero: React.FC = () => {
                   !checkProductInCart({
                     "price": "",
                     "title": "TV LED NOBLEX DK43X7100 FHD ANDROID",
-                    "imageUrl": "https://www.dipromas.com.ar/web/image/product.template/8643/image_512/%5B085-93551%5D%20TV%20LED%20NOBLEX%20DK43X7100%20FHD%20ANDROID?unique=6966c51",
-                    "category": "televisores"
+                    "imageUrl": "",
+                    "category": "tv-y-video"
                   }) ? (
 
                     <button onClick={() => addToCart({
@@ -133,7 +133,7 @@ export const Hero: React.FC = () => {
                         "price": "",
                         "title": "TV LED NOBLEX DK43X7100 FHD ANDROID",
                         "imageUrl": "https://www.dipromas.com.ar/web/image/product.template/8643/image_512/%5B085-93551%5D%20TV%20LED%20NOBLEX%20DK43X7100%20FHD%20ANDROID?unique=6966c51",
-                        "category": "televisores"
+                        "category": "tv-y-video"
                       }, quantity: 1
                     })} className="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-[#00df9a] transition-all duration-200 border-b-2 border-transparent hover:border-[#1ea77b] focus:border-[#1ea77b]">
                       Añadir al carrito
@@ -147,8 +147,8 @@ export const Hero: React.FC = () => {
                         ... {
                           "price": "",
                           "title": "TV LED NOBLEX DK43X7100 FHD ANDROID",
-                          "imageUrl": "https://www.dipromas.com.ar/web/image/product.template/8643/image_512/%5B085-93551%5D%20TV%20LED%20NOBLEX%20DK43X7100%20FHD%20ANDROID?unique=6966c51",
-                          "category": "televisores"
+                          "imageUrl": "hhttps://www.dipromas.com.ar/web/image/product.template/8643/image_512/%5B085-93551%5D%20TV%20LED%20NOBLEX%20DK43X7100%20FHD%20ANDROID?unique=6966c51",
+                          "category": "tv-y-video"
                         }, quantity: 1
                       })} className="inline-flex items-center justify-center pb-0.5 mt-5 text-base font-semibold text-[#e76e49] transition-all duration-200 border-b-2 border-transparent hover:border-[#b84e40] focus:border-[#b84e40]">
                         Eliminar del carrito
@@ -166,7 +166,7 @@ export const Hero: React.FC = () => {
                 <Link to={`/productos/${encodeURIComponent("Celular Samsung Galaxy A05 6.7\" 4/64GB Black")}`}>
                   <div className="relative flex justify-center">
                     <div className="block aspect-w-4 aspect-h-3">
-                      <img className="object-cover w-full h-full" src={Celular} alt="Celular samsung a05" style={{ width: 170, height: 250 }} />
+                      <img className="object-cover w-full h-full" src={Celular} alt="Celular Samsung" style={{ width: 250, height: 250 }} />
                     </div>
 
                     <div className="absolute top-4 left-4">
@@ -174,9 +174,9 @@ export const Hero: React.FC = () => {
                     </div>
                   </div>
                   <p className="mt-5 text-2xl font-semibold">
-                    <p className="text-black"> SAMSUNG Galaxy A05 </p>
+                    <p className="text-black"> Celular Samsung Galaxy A05</p>
                   </p>
-                  <p className="mt-4 text-base text-gray-600">Pantalla HD 6.7" 4/64GB. Rendimiento fluido y eficiente</p>
+                  <p className="mt-4 text-base text-gray-600">¡Mantente siempre conectado con el Celular Samsung A05!</p>
                 </Link>
                 {
                   !checkProductInCart({
@@ -221,7 +221,8 @@ export const Hero: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* <Productos /> */}
+
+
       <div className='w-full bg-white text-center py-4 justify-center'>
         <div className='block md:hidden fixed top-16 left-0 right-0 bg-gray-900 py-2.5 w-full z-10'>
           <SearchBar />
