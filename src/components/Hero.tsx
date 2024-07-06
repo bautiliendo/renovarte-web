@@ -25,8 +25,11 @@ export const Hero: React.FC = () => {
           <div className="flex flex-col justify-between mx-1">
             <div className="flex-1 text-left ">
               <h2 className="text-xl xs:text-2xl font-bold leading-tight sm:text-4xl lg:text-5xl text-white pb-1">RENOVARTE - Córdoba AR</h2>
-              <p className="max-w-xl text-sm sm:text-base leading-relaxed text-white hidden sm:block py-1">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa</p>
-              <button onClick={() => navigate('/comprar')} className="mb-4 bg-[#00df9a] text-gray-900 hover:bg-[#1ea77b] text-sm my-2 py-2 px-6 rounded-full font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg sm:hidden">¿Cómo Comprar?</button>
+              <div className='flex-col'>
+              <p className="max-w-xl text-sm sm:text-base leading-relaxed text-white hidden sm:block py-1">La tienda donde encontrás todos los electrodomésticos, celulares y productos informáticos para renovar tu casa.</p>
+              <p onClick={() => navigate('/empresa')} className='max-w-xl text-sm sm:text-base leading-relaxed text-white hidden sm:block py-1 1050px:hidden hover:underline hover:cursor-pointer'>Conocer más</p>
+              </div>
+              <button onClick={() => navigate('/comprar')} className="mb-4 bg-[#00df9a] text-gray-900 hover:bg-[#1ea77b] text-sm my-2 py-2 px-6 rounded-full font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg 1050px:hidden">¿Cómo Comprar?</button>
               <div>
                 <p className='text-lg sm:text-2xl md:text-3xl font-bold'>
                   Beneficios exclusivos y convenios con mutuales
@@ -59,7 +62,7 @@ export const Hero: React.FC = () => {
                   <p className="mt-5 text-2xl font-semibold">
                     <p className="text-black"> Cafetera ATMA Filtro</p>
                   </p>
-                  <p className="mt-4 text-base text-gray-600">Disfruta del sabor auténtico con la Cafetera ATMA Filtro</p>
+                  <p className="mt-4 text-base text-gray-600">Disfrutá del sabor auténtico con la Cafetera ATMA Filtro</p>
                 </Link>
                 {
                   !checkProductInCart({
@@ -118,7 +121,7 @@ export const Hero: React.FC = () => {
                   <p className="mt-5 text-2xl font-semibold">
                     <p className="text-black">TV NOBLEX FHD Android </p>
                   </p>
-                  <p className="mt-4 text-base text-gray-600">¡Disfruta la Copa América y la Eurocopa con el TV NOBLEX FHD Android!</p>
+                  <p className="mt-4 text-base text-gray-600">¡Disfrutá la Copa América y la Eurocopa con el TV NOBLEX FHD Android!</p>
                 </Link>
                 {
                   !checkProductInCart({
@@ -176,7 +179,7 @@ export const Hero: React.FC = () => {
                   <p className="mt-5 text-2xl font-semibold">
                     <p className="text-black"> Celular Samsung Galaxy A05</p>
                   </p>
-                  <p className="mt-4 text-base text-gray-600">¡Mantente siempre conectado con el Celular Samsung A05!</p>
+                  <p className="mt-4 text-base text-gray-600">¡Mantenete siempre conectado con el Celular Samsung A05!</p>
                 </Link>
                 {
                   !checkProductInCart({

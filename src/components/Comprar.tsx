@@ -7,8 +7,7 @@ export const Comprar: React.FC = () => {
   return (
     <div className="w-full bg-white py-32 px-4 ">
       <div className='max-w-[1240px] mx-auto grid '>
-
-        <h1 className="md:text-3xl sm:text-2xl text:xl font-bold py-2">¿Cómo Comprar / Consultar?</h1>
+        <h1 className="md:text-3xl sm:text-2xl text-xl font-bold py-2">¿Cómo Comprar / Consultar?</h1>
         <p className="mb-4">
           En nuestro e-commerce, puedes añadir productos a tu carrito y coordinar una compra o simplemente consultar detalles y precio de un producto a través de WhatsApp.
         </p>
@@ -25,8 +24,9 @@ export const Comprar: React.FC = () => {
         </ol>
         <button onClick={() => navigate('/productos')} className="w-[200px] bg-[#00df9a] text-gray-900 hover:bg-[#1ea77b] py-2 px-6 my-4 rounded-full text-sm font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">Ver Productos</button>
         <p className="text-gray-700">
-          <strong className='text-[#00df9a]'> ¡Es fácil y rápido! </strong> Si tienes alguna duda, no dudes en contactarnos.
+          <strong className='text-[#00df9a]'>¡Es fácil y rápido!</strong> Si tienes alguna duda, no dudes en contactarnos.
         </p>
+
       </div>
     </div>
   )
