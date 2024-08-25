@@ -121,7 +121,7 @@ export const Hero: React.FC = () => {
                   <p className="mt-5 text-2xl font-semibold">
                     <p className="text-black">TV NOBLEX FHD Android </p>
                   </p>
-                  <p className="mt-4 text-base text-gray-600">¡Disfrutá la Copa América y la Eurocopa con el TV NOBLEX FHD Android!</p>
+                  <p className="mt-4 text-base text-gray-600">¡Disfrutá de series, películas y partidos con el TV NOBLEX FHD Android!</p>
                 </Link>
                 {
                   !checkProductInCart({
